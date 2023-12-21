@@ -1,0 +1,20 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="clarity:list-line" clip-path="url(#clip0_696_13889)">
+<path id="Vector" d="M10 5.3335H16V6.66683H10V5.3335Z" fill="white"/>
+<path id="Vector_2" d="M10 8H16V9.33333H10V8Z" fill="white"/>
+<path id="Vector_3" d="M10 10.6665H16V11.9998H10V10.6665Z" fill="white"/>
+<path id="Vector_4" d="M10 13.3335H16V14.6668H10V13.3335Z" fill="white"/>
+<path id="Vector_5" d="M10 16H16V17.3333H10V16Z" fill="white"/>
+<path id="Vector_6" d="M7.33325 5.3335H8.66659V6.66683H7.33325V5.3335Z" fill="white"/>
+<path id="Vector_7" d="M7.33325 8H8.66659V9.33333H7.33325V8Z" fill="white"/>
+<path id="Vector_8" d="M7.33325 10.6665H8.66659V11.9998H7.33325V10.6665Z" fill="white"/>
+<path id="Vector_9" d="M7.33325 13.3335H8.66659V14.6668H7.33325V13.3335Z" fill="white"/>
+<path id="Vector_10" d="M7.33325 16H8.66659V17.3333H7.33325V16Z" fill="white"/>
+<path id="Vector_11" d="M18.6667 1.3335H5.33333C4.97971 1.3335 4.64057 1.47397 4.39052 1.72402C4.14048 1.97407 4 2.31321 4 2.66683V21.3335C4 21.6871 4.14048 22.0263 4.39052 22.2763C4.64057 22.5264 4.97971 22.6668 5.33333 22.6668H18.6667C19.0203 22.6668 19.3594 22.5264 19.6095 22.2763C19.8595 22.0263 20 21.6871 20 21.3335V2.66683C20 2.31321 19.8595 1.97407 19.6095 1.72402C19.3594 1.47397 19.0203 1.3335 18.6667 1.3335ZM18.6667 21.3335H5.33333V2.66683H18.6667V21.3335Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_696_13889">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
