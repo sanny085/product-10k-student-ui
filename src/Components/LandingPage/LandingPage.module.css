@@ -12,4 +12,61 @@
     rgba(251, 251, 251, 0.63) 100%
   );
   box-shadow: 0px 4px 4px 0px rgba(255, 133, 65, 0.2);
+  animation: quotecard_animation 4s ease-in-out 1s infinite;
+}
+.quotecard_card_parent::-webkit-scrollbar {
+  display: none;
+}
+.quotecard_card_parent {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.imageTransition1 {
+  animation: topToBottam_viceversa 5s ease-in 0.5s infinite;
+}
+
+.imageTransition2 {
+  animation: opacity_animation 3s ease-in-out 1s infinite;
+}
+
+@keyframes opacity_animation {
+  0% {
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes topToBottam_viceversa {
+  0% {
+    transform: translateY(-20px);
+  }
+  30% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes quotecard_animation {
+  0% {
+    transform: translatex(-379px);
+  }
+  30% {
+    transform: translatex(-379px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
 }

@@ -18,7 +18,7 @@ export default function HomePage() {
         dropDown={dropDown}
         handleDropDown={handleDropDown}
       />
-      <LandingPage/>
+      <LandingPage activeItem={activeItem}/>
     </>
   );
 }
