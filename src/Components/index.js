@@ -2,6 +2,8 @@
 import { useState } from "react";
 import NavBar from "./NavBar/NavBar";
 import LandingPage from "./LandingPage/LandingPage";
+import HiringPartners from "./HiringPartners/HiringPartners";
+import { TeamExperts } from "./TeamExperts/TeamExperts";
 
 export default function HomePage() {
   //Navbar
@@ -19,6 +21,8 @@ export default function HomePage() {
         handleDropDown={handleDropDown}
       />
       <LandingPage activeItem={activeItem}/>
+      <HiringPartners/>
+      <TeamExperts/>
     </>
   );
 }

@@ -6,7 +6,7 @@ export default function NavBar({
   handleDropDown,
 }) {
   return (
-    <nav className="mx-[20px] mt-[42px] items-center flex justify-between">
+    <nav className="mt-[20px] sm:w-full mb-[30px] sm:px-[px] md:px-[20px] items-center flex justify-between">
       <img src="/LandingPageImages/10k_Logo.svg" className={`w-[132px] h-[46px] ${styles.logo} flex-shrink-0`} />
       <section
         className={`flex ${styles.menuSection} justify-end sm:gap-x-[15px] md:gap-x-[36px] font-bold sm:text-[16px] items-center`}
@@ -51,6 +51,9 @@ export default function NavBar({
             } cursor-pointer`}
           >
             Sholarship
+          </p>
+          <p className="hover:text-[#FF8541] md:hidden">
+            Login
           </p>
         </div>
         <button
