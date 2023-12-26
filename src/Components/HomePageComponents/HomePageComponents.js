@@ -9,12 +9,16 @@ import Courses from "../Courses/Courses";
 import HereAboutUs from "../HereAboutUs/HereAboutUs";
 import Joinus from "../Joinus/JoinUs";
 import Footer from "../Footer/Footer";
-
+import RequestCallBack from "../Modals/RequestModal/RequestModal";
 
 export default function HomePageComponents() {
   const [activeModuleNum, setActiveModuleNum] = useState(1);
+  const [requestCallModal, setRequestCallModal] = useState(false);
   const handleActiveModule = (num) => {
     setActiveModuleNum(num);
+  };
+  const handleRequestModal = () => {
+    setRequestCallModal(!requestCallModal);
   };
   const successStoriesData = [
     {
@@ -123,18 +127,26 @@ export default function HomePageComponents() {
   return (
     <>
       <NavBar activeItem={"Home"} />
-      <LandingPage />
-      <HiringPartners />
-      <TeamExperts />
-      <SucessStories successStoriesData={successStoriesData} />
+      <LandingPage handleRequestModal={handleRequestModal} />
+      <HiringPartners handleRequestModal={handleRequestModal} />
+      <RequestCallBack
+        handleRequestModal={handleRequestModal}
+        requestCallModal={requestCallModal}
+      />
+      <TeamExperts handleRequestModal={handleRequestModal} />
+      <SucessStories
+        handleRequestModal={handleRequestModal}
+        successStoriesData={successStoriesData}
+      />
       <Courses
         activeModuleNum={activeModuleNum}
         handleActiveModule={handleActiveModule}
         curriculum={curriculum}
+        handleRequestModal={handleRequestModal}
       />
-      <HereAboutUs/>
-      <Joinus/>
-      <Footer/>
+      <HereAboutUs handleRequestModal={handleRequestModal} />
+      <Joinus />
+      <Footer />
     </>
   );
 }

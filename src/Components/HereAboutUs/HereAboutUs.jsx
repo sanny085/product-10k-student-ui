@@ -1,6 +1,6 @@
 import styles from "./HereAboutUs.module.css";
 
-export default function HereAboutUs() {
+export default function HereAboutUs({handleRequestModal}) {
   return (
     <main className="bg-[#F6F0FF] py-[50px]">
       <p className="text-[35px] font-[700] tracking-[120%] text-center pb-[40px]">
@@ -33,9 +33,9 @@ export default function HereAboutUs() {
           alt=""
         />
       </div>
-      <button className="uppercase sm:mx-auto mt-[35px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white">
+      <button onClick={()=>handleRequestModal()} className="uppercase sm:mx-auto mt-[35px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white">
         <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p>request callback</p>
+        <p  className="tracking-[1px]">request callback</p>
       </button>
     </main>
   );

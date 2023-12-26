@@ -1,6 +1,6 @@
 import styles from "./LandingPage.module.css";
 
-export default function LandingPage({ activeItem }) {
+export default function LandingPage({ handleRequestModal }) {
   return (
     <main className="lg:w-[85%] sm:w-[98%] md:w-[95%] mx-auto">
       <div className="flex xl:flex-row sm:flex-col-reverse justify-between ">
@@ -21,13 +21,13 @@ export default function LandingPage({ activeItem }) {
               <QuoteCard />
             </div>
           </div>
-          <button className="uppercase sm:mx-auto  mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
+          <button onClick={()=>handleRequestModal()} className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
             <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-            <p>request callback</p>
+            <p  className="tracking-[1px]">request callback</p>
           </button>
           <button className="uppercase sm:mx-auto flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#B7B7B7] text-[10px] font-semibold text-white">
             <img  draggable="false" src="/LandingPageImages/signup.svg" alt="" />
-            <p>sign up</p>
+            <p  className="tracking-[1px]">sign up</p>
           </button>
         </div>
         <div

@@ -4,6 +4,7 @@ export default function Courses({
   curriculum,
   activeModuleNum,
   handleActiveModule,
+  handleRequestModal,
 }) {
   const renderModule = (moduleNum, title, duration) => (
     <div
@@ -32,7 +33,8 @@ export default function Courses({
       </p>
       <section className={` ${styles.section} w-full flex`}>
         <div className="flex-shrink-0  sm:w-[10%] items-center gap-[10px] justify-center md:w-[10%] flex flex-col ">
-          <img  draggable="false"
+          <img
+            draggable="false"
             className=" block flex-shrink-0 sm:h-[40px] sm:w-[40px]"
             src="/courses_images/htm_icon.svg"
             alt=""
@@ -56,7 +58,8 @@ export default function Courses({
                 className={`flex flex-shrink-0 flex-col overflow-hidden rounded-2xl shadow-[0_4px_10px_0px_rgba(0,0,0,0.25)] sm:mx-auto sm:w-[80%] ${styles.card1} md:w-[70%] lg:w-[50%] xl:mx-[0px] xl:w-[381px] `}
               >
                 <div className="">
-                  <img  draggable="false"
+                  <img
+                    draggable="false"
                     src="/courses_images/courseheading.png"
                     className="w-full"
                     alt="Course-heading"
@@ -133,16 +136,20 @@ export default function Courses({
                 </div>
               </div>
             </div>
-            <button className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center md:w-[297px] md:h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-              <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-              <p>request callback</p>
+            <button
+              onClick={() => handleRequestModal()}
+              className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center md:w-[297px] md:h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
+            >
+              <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
+              <p className="tracking-[1px]">request callback</p>
             </button>
           </div>
         </div>
       </section>
       <section className="flex">
         <div className=" items-center gap-[10px] justify-center md:w-[10%] flex flex-col ">
-          <img  draggable="false"
+          <img
+            draggable="false"
             className=" my-2 block flex-shrink-0 sm:h-[40px] sm:w-[40px]"
             src="/courses_images/location.svg"
             alt=""
@@ -154,13 +161,19 @@ export default function Courses({
             journey
           </p>{" "}
           <div className=" ">
-            <img  draggable="false" className="w-full" src="/courses_images/journey.svg" alt="" />
+            <img
+              draggable="false"
+              className="w-full"
+              src="/courses_images/journey.svg"
+              alt=""
+            />
           </div>
         </div>
       </section>
       <section className="flex md:flex-row sm:flex-col">
         <div className="sm:w-[10%] ">
-          <img  draggable="false"
+          <img
+            draggable="false"
             className="w-[40px] mx-auto mt-1 h-[40px]"
             src="/courses_images/profileicon.svg"
             alt=""
@@ -172,36 +185,60 @@ export default function Courses({
           </p>
           <div className="flex lg:ml-[55px] sm:items-end lg:justify-between sm:justify-around  md:items-center md:gap-[100px]">
             <div className="flex mt-[30px] gap-y-[14px] items-center flex-col">
-              <div className=" sm:h-[40px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
-                <img  draggable="false" src="/courses_images/Frame 682.png" alt="" />
+              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+                <img
+                  draggable="false"
+                  src="/courses_images/Frame 682.png"
+                  alt=""
+                />
               </div>
-              <div className=" sm:h-[42px] sm:w-[50px]  md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
-                <img  draggable="false" src="/courses_images/Frame 687.png" alt="" />
+              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+                <img
+                  draggable="false"
+                  src="/courses_images/Frame 687.png"
+                  alt=""
+                />
               </div>
-              <div className=" sm:h-[42px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
-                <img  draggable="false" src="/courses_images/Frame 687.png" alt="" />
+              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+                <img
+                  draggable="false"
+                  src="/courses_images/Frame 688.png"
+                  alt=""
+                />
               </div>
-              <div className=" sm:h-[42px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
-                <img  draggable="false" src="/courses_images/Frame 688.png" alt="" />
+              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+                <img
+                  draggable="false"
+                  src="/courses_images/Frame 689.png"
+                  alt=""
+                />
               </div>
-              <div className=" sm:h-[42px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
-                <img  draggable="false" src="/courses_images/Frame 689.png" alt="" />
-              </div>
-              <div className=" sm:h-[40px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
-                <img  draggable="false" src="/courses_images/Frame 690.png" alt="" />
+              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+                <img
+                  draggable="false"
+                  src="/courses_images/Frame 690.png"
+                  alt=""
+                />
               </div>
             </div>
             <div
               className={`${styles.bg_image} sm:w-[310px] md:w-[700px] md:h-[500px] lg:w-[900px] lg:h-[900px] xl:w-[977px] xl:h-[931px] `}
             >
-              <img  draggable="false" src="/courses_images/Frame 698.png" alt="" />
+              <img
+                draggable="false"
+                src="/courses_images/Frame 698.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </section>
-      <button className="uppercase sm:mx-auto tracking-[1px] mb-[50px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-        <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p>request callback</p>
+      <button
+        onClick={() => handleRequestModal()}
+        className="uppercase sm:mx-auto tracking-[1px] mb-[50px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
+      >
+        <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
+        <p className="tracking-[1px]">request callback</p>
       </button>
     </>
   );

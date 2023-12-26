@@ -1,6 +1,6 @@
 import styles from "./TeamExperts.module.css";
 
-export function TeamExperts(props) {
+export function TeamExperts({ handleRequestModal}) {
   return (
     <main>
       <p
@@ -113,9 +113,9 @@ export function TeamExperts(props) {
           </div>
         </div>
       </section>
-      <button className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
+      <button onClick={()=>handleRequestModal()} className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
         <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p>request callback</p>
+        <p  className="tracking-[1px]">request callback</p>
       </button>
     </main>
   );
