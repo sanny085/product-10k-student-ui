@@ -1,0 +1,30 @@
+@media screen and (width< 682px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    top: 100px;
+    left: -0px;
+    transform: translateX(-20px);
+    background: white;
+    z-index: 1;
+  }
+  .menu p {
+    margin-bottom: 10px;
+    margin-left: 39px;
+    border-bottom: 1px solid #e9edc9;
+  }
+  .hide {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+  }
+}
+@media screen and (width>=682px) {
+  .menuIcon {
+    display: none;
+  }
+}
