@@ -9,16 +9,17 @@ import Courses from "../Courses/Courses";
 import HereAboutUs from "../HereAboutUs/HereAboutUs";
 import Joinus from "../Joinus/JoinUs";
 import Footer from "../Footer/Footer";
-import RequestCallBack from "../Modals/RequestModal/RequestModal";
+import RequestCallBack from "../Modals/ThankYouModal/ThankYouModal";
+import { useRouter } from "next/navigation";
 
 export default function HomePageComponents() {
   const [activeModuleNum, setActiveModuleNum] = useState(1);
-  const [requestCallModal, setRequestCallModal] = useState(false);
+  const { push } = useRouter();
   const handleActiveModule = (num) => {
     setActiveModuleNum(num);
   };
   const handleRequestModal = () => {
-    setRequestCallModal(!requestCallModal);
+    push("/RequestCallBack");
   };
   const successStoriesData = [
     {
@@ -129,10 +130,6 @@ export default function HomePageComponents() {
       <NavBar activeItem={"Home"} />
       <LandingPage handleRequestModal={handleRequestModal} />
       <HiringPartners handleRequestModal={handleRequestModal} />
-      <RequestCallBack
-        handleRequestModal={handleRequestModal}
-        requestCallModal={requestCallModal}
-      />
       <TeamExperts handleRequestModal={handleRequestModal} />
       <SucessStories
         handleRequestModal={handleRequestModal}

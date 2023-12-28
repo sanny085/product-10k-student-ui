@@ -1,5 +1,5 @@
 .text {
-  background: linear-gradient(270deg, #000 9.64%, #9747ff 99.8%);
+  background: linear-gradient(270deg, #000 9.64%, #f87b34 99.8%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -7,22 +7,25 @@
 }
 @keyframes color-swap {
   0% {
-    background: linear-gradient(270deg, #000 9.64%, #f87b34 99.8%);
+    background: linear-gradient(to right, #000 9.64%, #f87b34 99.8%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation-timing-function: linear;
   }
   50% {
-    background: linear-gradient(270deg, #f87b34 9.64%, #000 99.8%);
+    background: linear-gradient(to left, #000 9.64%, #f87b34 99.8%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation-timing-function: linear;
   }
   100% {
-    background: linear-gradient(270deg, #000 9.64%, #f87b34 99.8%);
+    background: linear-gradient(to right, #000 9.64%, #f87b34 99.8%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation-timing-function: linear;
   }
 }
 .img_top_text {
@@ -44,7 +47,6 @@
 @media screen and (width<=400px) {
   .img_top_text {
     transform: translate(1px);
-    
   }
 }
 
@@ -64,4 +66,3 @@
     background-position: 100% 0;
   }
 } */
-
