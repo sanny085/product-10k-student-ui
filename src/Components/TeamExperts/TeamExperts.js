@@ -39,10 +39,9 @@ export function TeamExperts({ handleRequestModal}) {
               As an entrepreneur who’s constantly finding ways to help people
               reach greater heights in their career and an Ex-Oracle guy,{" "}
               <span className={`${styles.text_hover}`}>
-                {" "}
                 I know exactly what it takes to launch a career in the IT
                 industry.
-              </span>{" "}
+              </span>
               The truth is your background or your degrees don’t matter! What
               matters is your skills, only your skills!
             </p>

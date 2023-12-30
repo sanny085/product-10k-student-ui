@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 export default function NavBar(props) {
-  const { activeItem } = props;
+  const { activeItem, handleLoginRoute } = props;
   const { push } = useRouter();
   const [dropDown, setDropDown] = useState(false);
   const handleDropDown = () => setDropDown(() => !dropDown);
@@ -26,14 +26,14 @@ export default function NavBar(props) {
           } sm:gap-x-[15px] p-[10px] md:gap-x-[32px] justify-between`}
         >
           <p
-            onClick={() => handleNavBarNavigation("Home")}
+            onClick={() => handleNavBarNavigation("home")}
             className={`${
               activeItem === "Home" ? "text-[#FF8541]" : "hover:text-[#FF8541]"
             } cursor-pointer`}
           >
             Home
           </p>
-          <Link href="/Home/#Course">
+          <Link href="#Course">
             <p
               className={`${
                 activeItem === "Course"
@@ -45,7 +45,7 @@ export default function NavBar(props) {
             </p>
           </Link>
           <p
-            onClick={() => handleNavBarNavigation("FreeLecture")}
+            onClick={() => handleNavBarNavigation("freeLecture")}
             className={`${
               activeItem === "Free Lecture"
                 ? "text-[#FF8541]"
@@ -55,7 +55,7 @@ export default function NavBar(props) {
             Free Lecture
           </p>
           <p
-            onClick={() => handleNavBarNavigation("Scholarship")}
+            onClick={() => handleNavBarNavigation("scholarship")}
             className={`${
               activeItem === "Scholarship"
                 ? "text-[#FF8541]"
@@ -67,6 +67,7 @@ export default function NavBar(props) {
           <p className="hover:text-[#FF8541] md:hidden">Login</p>
         </div>
         <button
+        onClick={handleLoginRoute}
           className={`bg-[#FF8541] ${styles.hide} sm:w-[90px] p-[10px] flex justify-center items-center md:w-[107px] sm:h-[39px] rounded-md text-white`}
         >
           Login
