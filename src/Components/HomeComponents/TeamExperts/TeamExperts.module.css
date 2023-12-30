@@ -34,21 +34,16 @@
   }
 }
 
-
-.text_hover{
+.text_hover {
   transition: background-color 0.3s ease;
-  background-color: rgba(252, 217, 102, 0);
+  
 }
-.card:hover .text_hover{
+.card:hover .text_hover {
   background-color: #fcd966;
-  background-color: rgba(252, 217, 102, 1); 
 }
-.card:hover .heading{
+.card:hover .heading {
   background: linear-gradient(270deg, #000 9.64%, #ff8541 99.8%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
-

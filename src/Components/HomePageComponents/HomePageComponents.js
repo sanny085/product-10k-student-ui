@@ -9,17 +9,19 @@ import Courses from "../Courses/Courses";
 import HereAboutUs from "../HereAboutUs/HereAboutUs";
 import Joinus from "../Joinus/JoinUs";
 import Footer from "../Footer/Footer";
-import RequestCallBack from "../Modals/ThankYouModal/ThankYouModal";
 import { useRouter } from "next/navigation";
 
 export default function HomePageComponents() {
   const [activeModuleNum, setActiveModuleNum] = useState(1);
   const { push } = useRouter();
+  const handleLoginRoute = () => {
+    push("/preAuth/login");
+  };
   const handleActiveModule = (num) => {
     setActiveModuleNum(num);
   };
   const handleRequestModal = () => {
-    push("/RequestCallBack");
+    push("/preAuth/requestCallBack");
   };
   const successStoriesData = [
     {
@@ -127,7 +129,7 @@ export default function HomePageComponents() {
   ];
   return (
     <>
-      <NavBar activeItem={"Home"} />
+      <NavBar activeItem={"Home"} handleLoginRoute={handleLoginRoute} />
       <LandingPage handleRequestModal={handleRequestModal} />
       <HiringPartners handleRequestModal={handleRequestModal} />
       <TeamExperts handleRequestModal={handleRequestModal} />

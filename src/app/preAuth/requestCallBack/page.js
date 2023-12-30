@@ -1,5 +1,5 @@
 "use client";
-import ThankYouModal from "@/Components/Modals/ThankYouModal/ThankYouModal";
+import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
 import styles from "./RequestCallBack.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -175,7 +175,6 @@ const RequestCallBack = () => {
               Send Request
             </button>
           </div>
-          
         </form>
         <ThankYouModal
           handleHomeRoute={handleHomeRoute}
