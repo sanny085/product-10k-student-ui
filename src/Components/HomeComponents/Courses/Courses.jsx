@@ -1,11 +1,13 @@
+"use client";
+import { useState } from "react";
 import styles from "./Courses.module.css";
 
-export default function Courses({
-  curriculum,
-  activeModuleNum,
-  handleActiveModule,
-  handleRequestModal,
-}) {
+export default function Courses({ curriculum }) {
+  const [activeModuleNum, setActiveModuleNum] = useState(0);
+  const handleActiveModule = (num) => {
+    setActiveModuleNum(num);
+  };
+
   const renderModule = (moduleNum, title, duration) => (
     <div
       key={moduleNum}
@@ -102,12 +104,12 @@ export default function Courses({
                     className={`flex sm:flex-row  md:flex-col ${styles.scroll}  md:gap-y-4 lg:gap-y-1`}
                   >
                     {curriculum.map(({ week, title }, idx) =>
-                      renderModule(idx + 1, title, week)
+                      renderModule(idx, title, week)
                     )}
                   </div>
                   <div className="w-full">
                     <p className="font-bold sm:p-2 sm:text-[14px] md:p-0 md:text-[14px] lg:p-0 lg:text-[15px]">
-                      {curriculum[activeModuleNum - 1].week}
+                      {curriculum[activeModuleNum].week}
                     </p>
                     <hr className="h-1 rounded-xl bg-black to-[#CB5C1C] md:mt-[10px]" />
                     <ul
@@ -115,10 +117,10 @@ export default function Courses({
                     >
                       <li>
                         <p className="mb-[18px]  font-bold">
-                          {curriculum[activeModuleNum - 1].title}
+                          {curriculum[activeModuleNum].title}
                         </p>
                         <ul className={`ml-[30px] list-disc`}>
-                          {curriculum[activeModuleNum - 1].points.map(
+                          {curriculum[activeModuleNum].points.map(
                             (point, idx) => (
                               <li className="mb-[18px] " key={idx}>
                                 {point}
@@ -136,12 +138,9 @@ export default function Courses({
                 </div>
               </div>
             </div>
-            <button
-              onClick={() => handleRequestModal()}
-              className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center md:w-[297px] md:h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
-            >
+            <button className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center md:w-[297px] md:h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
               <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-              <p className="tracking-[1px]">request callback</p>
+              <p>request callback</p>
             </button>
           </div>
         </div>
@@ -185,35 +184,42 @@ export default function Courses({
           </p>
           <div className="flex lg:ml-[55px] sm:items-end lg:justify-between sm:justify-around  md:items-center md:gap-[100px]">
             <div className="flex mt-[30px] gap-y-[14px] items-center flex-col">
-              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+              <div className=" sm:h-[40px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
                 <img
                   draggable="false"
                   src="/courses_images/Frame 682.png"
                   alt=""
                 />
               </div>
-              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+              <div className=" sm:h-[42px] sm:w-[50px]  md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
                 <img
                   draggable="false"
                   src="/courses_images/Frame 687.png"
                   alt=""
                 />
               </div>
-              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+              <div className=" sm:h-[42px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
+                <img
+                  draggable="false"
+                  src="/courses_images/Frame 687.png"
+                  alt=""
+                />
+              </div>
+              <div className=" sm:h-[42px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
                 <img
                   draggable="false"
                   src="/courses_images/Frame 688.png"
                   alt=""
                 />
               </div>
-              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+              <div className=" sm:h-[42px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
                 <img
                   draggable="false"
                   src="/courses_images/Frame 689.png"
                   alt=""
                 />
               </div>
-              <div className=" sm:h-[50px] sm:w-[50px] md:h-[102px] md:w-[100px] lg:h-[140px] lg:w-[130px] xl:w-[150px] xl:h-[160px]">
+              <div className=" sm:h-[40px] sm:w-[50px] md:h-[98px] md:w-[100px] lg:h-[130px] lg:w-[130px] xl:w-[150px] xl:h-[150px]">
                 <img
                   draggable="false"
                   src="/courses_images/Frame 690.png"
@@ -233,12 +239,9 @@ export default function Courses({
           </div>
         </div>
       </section>
-      <button
-        onClick={() => handleRequestModal()}
-        className="uppercase sm:mx-auto tracking-[1px] mb-[50px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
-      >
+      <button className="uppercase sm:mx-auto tracking-[1px] mb-[50px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
         <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p className="tracking-[1px]">request callback</p>
+        <p>request callback</p>
       </button>
     </>
   );
