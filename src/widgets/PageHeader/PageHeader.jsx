@@ -70,11 +70,17 @@ export default function PageHeader() {
           </p>
           <p className="hover:text-[#FF8541] md:hidden">Login</p>
         </div>
-        <button
+        {/* <button
           className={`bg-[#FF8541] ${styles.hide} sm:w-[90px] p-[10px] flex justify-center items-center md:w-[107px] sm:h-[39px] rounded-md text-white`}
         >
           Login
-        </button>
+        </button> */}
+        <a
+          href="/preAuth/login"
+          className={`bg-[#FF8541] ${styles.hide} sm:w-[90px] p-[10px] flex justify-center items-center md:w-[107px] sm:h-[39px] rounded-md text-white`}
+        >
+          Login
+        </a>
       </section>
       <div className={styles.menuIcon} onClick={handleDropDown}>
         {dropDown ? (
