@@ -1,4 +1,3 @@
-"use client";
 import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
 import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
 
