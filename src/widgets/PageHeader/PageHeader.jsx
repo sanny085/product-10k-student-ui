@@ -1,15 +1,18 @@
 "use client";
-import styles from "./NavBar.module.css";
+import styles from "./PageHeader.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-export default function NavBar(props) {
-  const { activeItem } = props;
+export default function PageHeader() {
+  const [activeItem, setActiveItem] = useState("Home");
+
   const { push } = useRouter();
   const [dropDown, setDropDown] = useState(false);
   const handleDropDown = () => setDropDown(() => !dropDown);
   const handleNavBarNavigation = (item) => {
-    push(`${item}`);
+    const slug = item === "Home" ? "/" : `${item}`;
+    push(slug);
+    setActiveItem(item);
   };
   return (
     <nav className="mt-[20px] sm:w-full mb-[30px] sm:px-[10px] md:px-[20px] items-center flex justify-between">
@@ -33,8 +36,9 @@ export default function NavBar(props) {
           >
             Home
           </p>
-          <Link href="/Home/#Course">
+          <Link href="/#Course">
             <p
+              onClick={() => handleNavBarNavigation("Course")}
               className={`${
                 activeItem === "Course"
                   ? "text-[#FF8541]"
@@ -45,9 +49,9 @@ export default function NavBar(props) {
             </p>
           </Link>
           <p
-            onClick={() => handleNavBarNavigation("FreeLecture")}
+            onClick={() => handleNavBarNavigation("freeLecture")}
             className={`${
-              activeItem === "Free Lecture"
+              activeItem === "freeLecture"
                 ? "text-[#FF8541]"
                 : "hover:text-[#FF8541]"
             } cursor-pointer`}
@@ -55,9 +59,9 @@ export default function NavBar(props) {
             Free Lecture
           </p>
           <p
-            onClick={() => handleNavBarNavigation("Scholarship")}
+            onClick={() => handleNavBarNavigation("scholarship")}
             className={`${
-              activeItem === "Scholarship"
+              activeItem === "scholarship"
                 ? "text-[#FF8541]"
                 : "hover:text-[#FF8541]"
             } cursor-pointer`}

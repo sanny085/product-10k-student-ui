@@ -1,11 +1,9 @@
-import { LandingPageFooter } from "@/Components/LandingPage/LandingPage";
-import styles from "@/Components/LandingPage/LandingPage.module.css";
-import NavBar from "@/Components/NavBar/NavBar";
+import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
+import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
 
 const FreeLecture = () => {
   return (
     <>
-      <NavBar activeItem="Free Lecture" />
       <main
         className={`lg:w-[80%] ${styles.transition} sm:w-[98%] md:w-[95%] mx-auto`}
       >
@@ -32,24 +30,30 @@ const FreeLecture = () => {
               </div>
             </div>
             <button className="uppercase my-[24px] flex mx-auto justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-              <img  draggable="false" src="/LandingPageImages/video_icon.svg" alt="" />
+              <img
+                draggable="false"
+                src="/LandingPageImages/video_icon.svg"
+                alt=""
+              />
               <p>Watch free lecture</p>
             </button>
             <button className="uppercase flex mx-auto my-[24px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#B7B7B7] text-[10px] font-semibold text-white">
-              <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
+              <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
               <p>Request Call back</p>
             </button>
           </div>
           <div
             className={`${styles.imageTransition2} sm:mx-auto xl:mx-0 rounded-full sm:max-w-[400px] md:max-w-[591px] md:h-[591px]`}
           >
-            <img  draggable="false" src="/LandingPageImages/LandingImage3.png" alt="" />
+            <img
+              draggable="false"
+              src="/LandingPageImages/LandingImage3.png"
+              alt=""
+            />
           </div>
         </div>
         <LandingPageFooter />
-        
       </main>
-      
     </>
   );
 };
