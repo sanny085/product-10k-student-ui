@@ -1,5 +1,5 @@
-import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
-import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
+import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/Landing";
+import styles from "@/components/HomeComponents/LandingPage/Landing.module.css";
 
 const FreeLecture = () => {
   return (

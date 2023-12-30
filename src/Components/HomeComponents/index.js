@@ -1,4 +1,4 @@
-import LandingPage from "./LandingPage/LandingPage";
+import LandingPage from "./LandingPage/Landing";
 import HiringPartners from "./HiringPartners/HiringPartners";
 import { TeamExperts } from "./TeamExperts/TeamExperts";
 import SucessStories from "./SucessStories/SucessStories";
