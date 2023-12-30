@@ -1,6 +1,7 @@
 import styles from "./TeamExperts.module.css";
+import Link from "next/link";
 
-export function TeamExperts({ handleRequestModal}) {
+export function TeamExperts() {
   return (
     <main>
       <p
@@ -19,16 +20,20 @@ export function TeamExperts({ handleRequestModal}) {
             className={`w-full py-[20px] flex flex-col gap-y-[15px] px-[30px] h-full`}
           >
             <div className="className={`w-full items-center lg:justify-between flex lg:flex-row sm:flex-col gap-y-[15px] h-full`}">
-              <p className={`md:text-[25px] text-center ${styles.heading} sm:text-[22px] sm:leading-6 md:leading-[auto] font-bold`}>
+              <p
+                className={`md:text-[25px] text-center ${styles.heading} sm:text-[22px] sm:leading-6 md:leading-[auto] font-bold`}
+              >
                 Anil Kumar Ghorakavi
               </p>
               <div className="lg:h-[28px] sm:flex-wrap md:flex-nowrap gap-[10px] lg:w-[228px] items-start flex lg:gap-x-[23px]">
-                <img  draggable="false"
+                <img
+                  draggable="false"
                   className="mx-auto"
                   src="experts_images/Amazon_logo 1.svg"
                   alt=""
                 />
-                <img  draggable="false"
+                <img
+                  draggable="false"
                   className="mx-auto"
                   src="experts_images/Vector.svg"
                   alt=""
@@ -60,11 +65,14 @@ export function TeamExperts({ handleRequestModal}) {
             className={`w-full py-[20px] flex flex-col gap-y-[15px] px-[30px] h-full`}
           >
             <div className="flex lg:flex-row md:text-[25px]  sm:text-[22px] items-center sm:flex-col gap-[20px] justify-between ">
-              <p className={`sm:leading-6 md:leading-[auto] font-bold ${styles.heading}`}>
+              <p
+                className={`sm:leading-6 md:leading-[auto] font-bold ${styles.heading}`}
+              >
                 Praveen Kumar
               </p>
               <div className="lg:h-[28px]  sm:flex-wrap md:flex-nowrap gap-[10px] lg:w-[228px] items-start  flex lg:gap-x-[23px]">
-                <img  draggable="false"
+                <img
+                  draggable="false"
                   className="h-full"
                   src="experts_images/logos_microsoft-icon.svg"
                   alt=""
@@ -95,7 +103,9 @@ export function TeamExperts({ handleRequestModal}) {
             className={`w-full py-[20px] flex flex-col gap-y-[15px] px-[30px] h-full`}
           >
             <div className={`w-full  h-full`}>
-              <p className={`md:text-[25px] ${styles.heading} text-center lg:text-start sm:text-[22px] sm:leading-6 md:leading-[auto] font-bold`}>
+              <p
+                className={`md:text-[25px] ${styles.heading} text-center lg:text-start sm:text-[22px] sm:leading-6 md:leading-[auto] font-bold`}
+              >
                 Pavan Kumar
               </p>
             </div>
@@ -112,10 +122,13 @@ export function TeamExperts({ handleRequestModal}) {
           </div>
         </div>
       </section>
-      <button onClick={()=>handleRequestModal()} className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-        <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p  className="tracking-[1px]">request callback</p>
-      </button>
+      <Link
+        href="/preAuth/requestCallBack"
+        className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
+      >
+        <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
+        <p className="tracking-[1px]">request callback</p>
+      </Link>
     </main>
   );
 }

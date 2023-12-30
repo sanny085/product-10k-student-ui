@@ -1,13 +1,9 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import styles from "./ThankYouModal.module.css";
-import { GreenTick, HomeIcon } from "./images";
-
-export default function ThankYouModal({
-  handleThankYouModal,
-  isTQModal,
-  handleHomeRoute,
-}) {
+import { GreenTick, HomeIcon } from "@/shared/svgIcons/homeScreen";
+import Link from "next/link";
+export default function ThankYouModal({ handleThankYouModal, isTQModal }) {
   const cancelButtonRef = useRef(null);
   return (
     <Transition.Root show={isTQModal} as={Fragment}>
@@ -46,7 +42,9 @@ export default function ThankYouModal({
                 <div className="text-[#289C26] text-[16px] items-center font-bold leading-[normal] mx-auto w-fit gap-[10px] flex">
                   <GreenTick /> Request submitted
                 </div>
-                <div className={`text-[64px] font-[700] ${styles.heading} leading-[normal] text-center`}>
+                <div
+                  className={`text-[64px] font-[700] ${styles.heading} leading-[normal] text-center`}
+                >
                   <p className={`${styles.text_linear_gradient}`}>Thank you</p>
                   <p>for reaching out</p>
                 </div>
@@ -54,15 +52,16 @@ export default function ThankYouModal({
                   Our career expert will get in touch with you at the provided
                   number shortly.
                 </p>
-                <button
-                  onClick={() => {
-                    handleThankYouModal();
-                    handleHomeRoute();
-                  }}
-                  className="bg-black text-[12px] flex items-center gap-[10px] px-[10px] py-[8px] text-white font-bold leading-[normal] mx-auto rounded-[8px] w-fit"
-                >
-                  <HomeIcon /> <span>Go to Home</span>
-                </button>
+                <Link href="/">
+                  <button
+                    onClick={() => {
+                      handleThankYouModal();
+                    }}
+                    className="bg-black text-[12px] flex items-center gap-[10px] px-[10px] py-[8px] text-white font-bold leading-[normal] mx-auto rounded-[8px] w-fit"
+                  >
+                    <HomeIcon /> <span>Go to Home</span>
+                  </button>
+                </Link>
               </Dialog.Panel>
             </Transition.Child>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import NavBar from "../NavBar/NavBar";
+// import NavBar from "../NavBar/NavBar";
 import LandingPage from "../LandingPage/LandingPage";
 import HiringPartners from "../HiringPartners/HiringPartners";
 import { TeamExperts } from "../TeamExperts/TeamExperts";

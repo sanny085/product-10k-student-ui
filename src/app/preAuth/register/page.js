@@ -1,15 +1,15 @@
 "use client";
-
 import { useState } from "react";
 import styles from "./Register.module.css";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 export default function Register() {
+  const [selectedFile, setSelectedFile] = useState(null);
   const handleConvertNum = (event) => {
     const inputValue = event.target.value.replace(/\D/g, "");
     event.target.value = inputValue;
   };
-  const [selectedFile, setSelectedFile] = useState(null);
-  const { push } = useRouter();
+
   const handleFileChange = (e) => {
     const fileInput = e.target;
     const file = fileInput.files[0];
@@ -26,7 +26,9 @@ export default function Register() {
         <div className="flex justify-center relative gap-[32px] items-end w-full">
           <div className="flex absolute left-0 gap-[10px] items-start font-[700] text-[12px] tracking-wide">
             <img src="/Register_Images/home.svg" alt="" />
-            <span className="uppercase"> go back</span>
+            <Link href="/">
+              <span className="uppercase"> go back</span>
+            </Link>
           </div>
           <p className="text-[24px] font-[600] leading-[normal]">
             Get Started with{" "}
@@ -103,7 +105,7 @@ export default function Register() {
                   Upload Profile Pic
                 </p>
                 <label className="w-full p-[12px] font-[400] text-center bg-[#FF8541] text-white text-[13px] rounded-[8px] cursor-pointer">
-                  Select File
+                  {selectedFile ? "Selected File" : "Select File "}
                   <input
                     type="file"
                     className="hidden"
@@ -258,14 +260,9 @@ export default function Register() {
         </button>
         <p className="text-[12px] mx-auto text-[#747474] font-[600]">
           Already have an account?{" "}
-          <span
-            onClick={() => {
-              push("/Login");
-            }}
-            className="text-[#FF8541] cursor-pointer"
-          >
+          <Link href="/Login" className="text-[#FF8541] cursor-pointer">
             Login
-          </span>
+          </Link>
         </p>
       </form>
     </main>
