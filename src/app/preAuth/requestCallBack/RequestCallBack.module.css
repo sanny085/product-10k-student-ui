@@ -1,0 +1,120 @@
+.text_linear_gradient {
+  background: linear-gradient(270deg, #000 9.61%, #ff8541 52.53%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.bg_img {
+  background: url("/RequestCallBack_images/Request callback.svg");
+  width: 465px;
+  height: 439px;
+  position: relative;
+}
+.call {
+  position: absolute;
+  top: 5%;
+  left: 21%;
+  animation: call_animation 5s ease 0.5s infinite;
+}
+@keyframes call_animation {
+  0%,
+  40%,
+  80% {
+    rotate: 0deg;
+  }
+  20%,
+  60%,
+  100% {
+    rotate: -10deg;
+  }
+}
+.chat_blue {
+  position: absolute;
+  top: 23%;
+  left: 15%;
+  animation: top_to_bottam 4s linear 0s infinite;
+}
+@keyframes top_to_bottam {
+  0%,
+  40%,
+  80% {
+    transform: translate(0px);
+  }
+  20%,
+  60%,
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.settings {
+  position: absolute;
+  top: 9.5%;
+  left: 38.5%;
+  animation: settings_anime 5s ease 0.1s infinite;
+}
+@keyframes settings_anime {
+  to {
+    rotate: 360deg;
+  }
+}
+.email {
+  position: absolute;
+  right: 20%;
+  top: 15%;
+  animation: top_to_bottam 5s ease 0.1s infinite;
+}
+.black_chat {
+  position: absolute;
+  top: 28%;
+  right: 10%;
+  animation: top_to_bottam 5s ease 0.1s infinite;
+}
+@media screen and (width<=470px) {
+    .content_section{
+        width: 100%;
+        padding: 15px;
+    }
+  .bg_img {
+    background: url("/RequestCallBack_images/Request callback.svg");
+    background-repeat: no-repeat;
+    background-size: fit;
+    width: 99%;
+    background-position: center center;
+  }
+  .call {
+    position: absolute;
+    height: 30px;
+    top: 6%;
+    left: 14%;
+    animation: call_animation 5s ease 0.5s infinite;
+  }
+  .chat_blue {
+    position: absolute;
+    height: 30px;
+    top: 23%;
+    left: 15%;
+    animation: top_to_bottam 4s linear 0s infinite;
+  }
+  .email {
+    position: absolute;
+    height: 25px;
+    right: 20%;
+    top: 15%;
+    animation: top_to_bottam 5s ease 0.1s infinite;
+  }
+  .black_chat {
+    position: absolute;
+    height: 25px;
+    top: 28%;
+    right: 10%;
+    animation: top_to_bottam 5s ease 0.1s infinite;
+  }
+  .settings {
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    animation: settings_anime 5s ease 0.1s infinite;
+  }
+}

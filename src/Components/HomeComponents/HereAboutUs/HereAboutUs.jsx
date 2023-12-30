@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export default function HereAboutUs() {
   return (
     <main className="bg-[#F6F0FF] py-[50px]">
@@ -31,10 +32,12 @@ export default function HereAboutUs() {
           alt=""
         />
       </div>
-      <button className="uppercase sm:mx-auto mt-[35px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white">
+      <Link href="/preAuth/requestCallBack"
+        className="uppercase sm:mx-auto mt-[35px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white"
+      >
         <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p>request callback</p>
-      </button>
+        <p className="tracking-[1px]">request callback</p>
+      </Link>
     </main>
   );
 }

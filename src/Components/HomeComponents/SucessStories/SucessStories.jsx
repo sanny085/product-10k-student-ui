@@ -1,6 +1,6 @@
 import StudentCard from "../../StudentCard/StudentCard";
 import styles from "./SucessStories.module.css";
-
+import Link from 'next/link'
 export default function SucessStories({ successStoriesData }) {
   return (
     <main className="bg-[#422C60] py-[58px] ">
@@ -9,7 +9,7 @@ export default function SucessStories({ successStoriesData }) {
       </p>
       <div>
         <div className={`${styles.SuccessStories} py-[43.5px] `}>
-          {successStoriesData.map((item, index) => (
+          {successStoriesData?.map((item, index) => (
             <StudentCard
               key={index}
               ctc={item.package}
@@ -22,10 +22,10 @@ export default function SucessStories({ successStoriesData }) {
             />
           ))}
         </div>
-        <button className="uppercase sm:mx-auto mt-[40px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white">
+        <Link href="/preAuth/requestCallBack" className="uppercase sm:mx-auto mt-[40px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white">
           <img src="/LandingPageImages/call.svg" alt="" />
           <p>request callback</p>
-        </button>
+        </Link>
       </div>
     </main>
   );

@@ -1,3 +1,4 @@
+"use client";
 import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
 import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
 
@@ -35,11 +36,11 @@ const FreeLecture = () => {
                 src="/LandingPageImages/video_icon.svg"
                 alt=""
               />
-              <p>Watch free lecture</p>
+              <p className="tracking-[1px]">Watch free lecture</p>
             </button>
             <button className="uppercase flex mx-auto my-[24px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#B7B7B7] text-[10px] font-semibold text-white">
               <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-              <p>Request Call back</p>
+              <p className="tracking-[1px]">Request Call back</p>
             </button>
           </div>
           <div
