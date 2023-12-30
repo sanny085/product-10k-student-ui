@@ -1,5 +1,5 @@
-import styles from "./Footer.module.css";
-const Footer = () => (
+import styles from "./PageFooter.module.css";
+const PageFooter = () => (
   <footer className={`${styles.footer_parent} h-[326px] w-full text-white`}>
     <div className={` ${styles.footer} `}>
       <div className="text-[16px] font-[400]">
@@ -47,4 +47,4 @@ const Footer = () => (
     </div>
   </footer>
 );
-export default Footer;
+export default PageFooter;

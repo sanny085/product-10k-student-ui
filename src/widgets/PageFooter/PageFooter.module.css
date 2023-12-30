@@ -47,7 +47,7 @@
     transform: translateY(-190px);
   }
 }
-@media screen and (width<=557px){
+@media screen and (width<=557px) {
   .footer_parent {
     height: auto;
     transform: translateY(-110px);
