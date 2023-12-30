@@ -1,6 +1,6 @@
 import styles from "./HiringPartners.module.css";
 
-export default function HiringPartners() {
+export default function HiringPartners({handleRequestModal}) {
   return (
     <>
       <section className="flex items-center gap-[24px] my-[16px] flex-col font-bold">
@@ -388,19 +388,19 @@ export default function HiringPartners() {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/RightData.png" alt="" />
+            <img draggable="false" src="/HiringPartners_images/line3/RightData.png" alt="" />
           </div>
 
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/Citrix.png" alt="" />
+            <img draggable="false" src="/HiringPartners_images/line3/Citrix.png" alt="" />
           </div>
         </div>
       </section>
-      <button className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px]  gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
+      <button onClick={()=>handleRequestModal()} className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px]  gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
         <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p>request callback</p>
+        <p  className="tracking-[1px]">request callback</p>
       </button>
     </>
   );
