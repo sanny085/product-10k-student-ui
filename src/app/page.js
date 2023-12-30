@@ -1,5 +1,4 @@
-import Image from "next/image";
-import HomePage from "./(routes)/Home/page";
+import HomePage from "./(routes)/home/page";
 
 export default function Home() {
   return (

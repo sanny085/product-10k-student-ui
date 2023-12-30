@@ -1,5 +1,3 @@
-import styles from "./HereAboutUs.module.css";
-
 export default function HereAboutUs() {
   return (
     <main className="bg-[#F6F0FF] py-[50px]">
