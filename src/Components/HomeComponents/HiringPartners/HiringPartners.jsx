@@ -1,6 +1,6 @@
 import styles from "./HiringPartners.module.css";
-
-export default function HiringPartners({handleRequestModal}) {
+import Link from "next/link";
+export default function HiringPartners() {
   return (
     <>
       <section className="flex items-center gap-[24px] my-[16px] flex-col font-bold">
@@ -23,7 +23,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[129px] flex justify-center items-center ${styles.image_slide}  h-[103.5px] flex-shrink-0 `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full w-full"
               src="HiringPartners_images/line1/HETERO HEALTHCARE LIMITED.png"
               alt=""
@@ -32,12 +33,17 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide} flex-shrink-0  items-center justify-center h-full w-[150px]`}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/PragmaEdge.png" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/PragmaEdge.png"
+              alt=""
+            />
           </div>
           <div
             className={`w-[125px] flex justify-center  items-center flex-shrink-0  ${styles.image_slide}`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="HiringPartners_images/line1/Teletext India Private Limited.png"
               alt=""
@@ -46,7 +52,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[129px] flex justify-center items-center ${styles.image_slide} flex-shrink-0 `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="HiringPartners_images/line1/The D. E.png"
               alt=""
@@ -55,12 +62,17 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[150px] ${styles.image_slide} flex-shrink-0 flex justify-center items-center`}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/Vector.svg" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/Vector.svg"
+              alt=""
+            />
           </div>
           <div
             className={`w-[150px] ${styles.image_slide} flex-shrink-0 justify-center flex items-center`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               src="HiringPartners_images/line1/Cigniti Technologies.png"
               alt=""
             />
@@ -68,17 +80,26 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[150px] ${styles.image_slide} flex-shrink-0 px-[34px] flex justify-center items-center `}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/Quixy.png" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/Quixy.png"
+              alt=""
+            />
           </div>
           <div
             className={`w-[150px] flex-shrink-0 px-[34px] ${styles.image_slide} flex justify-center items-center `}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/8th_element.png" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/8th_element.png"
+              alt=""
+            />
           </div>
           <div
             className={`w-[150px] ${styles.image_slide} flex-shrink-0 justify-center flex items-center`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full "
               src="HiringPartners_images/line1/birla_soft.jpeg"
               alt=""
@@ -87,7 +108,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[129px] flex justify-center items-center  ${styles.image_slide} h-[103.5px] flex-shrink-0 `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full w-full"
               src="HiringPartners_images/line1/HETERO HEALTHCARE LIMITED.png"
               alt=""
@@ -96,12 +118,17 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide} flex-shrink-0  items-center justify-center h-full w-[150px]`}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/PragmaEdge.png" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/PragmaEdge.png"
+              alt=""
+            />
           </div>
           <div
             className={`w-[125px] flex justify-center items-center  flex-shrink-0  ${styles.image_slide}`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="HiringPartners_images/line1/Teletext India Private Limited.png"
               alt=""
@@ -110,7 +137,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[129px] flex justify-center  items-center ${styles.image_slide} flex-shrink-0 `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="HiringPartners_images/line1/The D. E.png"
               alt=""
@@ -119,23 +147,36 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`w-[150px] ${styles.image_slide}  flex-shrink-0 flex justify-center items-center`}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/Vector.svg" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/Vector.svg"
+              alt=""
+            />
           </div>
 
           <div
             className={`w-[150px] flex-shrink-0 px-[34px] ${styles.image_slide}  flex justify-center items-center `}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/8th_element.png" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/8th_element.png"
+              alt=""
+            />
           </div>
           <div
             className={`w-[150px] ${styles.image_slide} flex-shrink-0 flex justify-center items-center`}
           >
-            <img  draggable="false" src="HiringPartners_images/line1/Vector.svg" alt="" />
+            <img
+              draggable="false"
+              src="HiringPartners_images/line1/Vector.svg"
+              alt=""
+            />
           </div>
           <div
             className={`w-[150px] ${styles.image_slide} flex-shrink-0 justify-center flex items-center`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               src="HiringPartners_images/line1/Cigniti Technologies.png"
               alt=""
             />
@@ -148,7 +189,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-centerh-full  w-[150px] `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/xilinx.jpeg"
               alt=""
@@ -157,7 +199,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center   w-[150px] `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/value_labs.jpeg"
               alt=""
@@ -166,7 +209,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center   w-[150px]`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/value_creed.jpeg"
               alt=""
@@ -175,7 +219,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center   justify-center w-[150px] px-[12.5px]`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/ht_labs.jpeg"
               alt=""
@@ -184,7 +229,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center   justify-center w-[150px] `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line2/kelton.jpeg"
               alt=""
@@ -193,7 +239,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line2/Mindtree.png"
               alt=""
@@ -202,7 +249,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className=" h-full"
               src="/HiringPartners_images/line2/Technovert.png"
               alt=""
@@ -211,12 +259,17 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line2/INVECAS.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line2/INVECAS.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px] px-[31px] py-[18.5px]`}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/Accenture.png"
               alt=""
@@ -225,7 +278,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line2/Dhan AI.png"
               alt=""
@@ -234,7 +288,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line2/lima ai.png"
               alt=""
@@ -243,12 +298,17 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]`}
           >
-            <img  draggable="false" src="/HiringPartners_images/line2/Commvault.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line2/Commvault.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-centerh-full  w-[150px] `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/xilinx.jpeg"
               alt=""
@@ -257,7 +317,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center   w-[150px] `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="w-full h-full"
               src="/HiringPartners_images/line2/value_labs.jpeg"
               alt=""
@@ -266,7 +327,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line2/Mindtree.png"
               alt=""
@@ -275,7 +337,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex ${styles.image_slide2} flex-shrink-0 items-center justify-center w-[150px]  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className=" h-full"
               src="/HiringPartners_images/line2/Technovert.png"
               alt=""
@@ -289,7 +352,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               src="/HiringPartners_images/line3/Tata Consultancy Services.png"
               alt=""
             />
@@ -297,7 +361,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center   `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               src="/HiringPartners_images/line3/helicaltech_helical insight.png"
               alt=""
             />
@@ -305,32 +370,53 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/CGI.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/CGI.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/RightData.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/RightData.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/Citrix.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/Citrix.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/GlobalLogic.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/GlobalLogic.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/Amista.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/Amista.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center   `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line3/ca_technologies.jpeg"
               alt=""
@@ -339,7 +425,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line3/thomsonreuters.jpeg"
               alt=""
@@ -349,7 +436,8 @@ export default function HiringPartners({handleRequestModal}) {
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center             className="h-full"
             `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line3/zebra.jpeg"
               alt=""
@@ -358,7 +446,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               className="h-full"
               src="/HiringPartners_images/line3/enhanz.jpeg"
               alt=""
@@ -367,7 +456,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               src="/HiringPartners_images/line3/Tata Consultancy Services.png"
               alt=""
             />
@@ -375,7 +465,8 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center   `}
           >
-            <img  draggable="false"
+            <img
+              draggable="false"
               src="/HiringPartners_images/line3/helicaltech_helical insight.png"
               alt=""
             />
@@ -383,25 +474,40 @@ export default function HiringPartners({handleRequestModal}) {
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center `}
           >
-            <img  draggable="false" src="/HiringPartners_images/line3/CGI.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/CGI.png"
+              alt=""
+            />
           </div>
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img draggable="false" src="/HiringPartners_images/line3/RightData.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/RightData.png"
+              alt=""
+            />
           </div>
 
           <div
             className={`flex justify-center w-[150px] flex-shrink-0 ${styles.image_slide} items-center  `}
           >
-            <img draggable="false" src="/HiringPartners_images/line3/Citrix.png" alt="" />
+            <img
+              draggable="false"
+              src="/HiringPartners_images/line3/Citrix.png"
+              alt=""
+            />
           </div>
         </div>
       </section>
-      <button onClick={()=>handleRequestModal()} className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px]  gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-        <img  draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p  className="tracking-[1px]">request callback</p>
-      </button>
+      <Link
+        href="/preAuth/RequestCallBack"
+        className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px]  gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
+      >
+        <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
+        <p className="tracking-[1px]">request callback</p>
+      </Link>
     </>
   );
 }

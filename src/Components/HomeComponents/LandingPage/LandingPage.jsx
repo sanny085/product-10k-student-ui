@@ -1,6 +1,6 @@
 import styles from "./LandingPage.module.css";
-
-export default function LandingPage({ handleRequestModal }) {
+import Link from "next/link";
+export default function LandingPage() {
   return (
     <main className="lg:w-[85%] sm:w-[98%] md:w-[95%] mx-auto">
       <div className="flex xl:flex-row sm:flex-col-reverse justify-between ">
@@ -21,17 +21,20 @@ export default function LandingPage({ handleRequestModal }) {
               <QuoteCard />
             </div>
           </div>
-          <button
-            onClick={() => handleRequestModal()}
+          <Link
+            href="/preAuth/requestCallBack"
             className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
           >
             <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
             <p className="tracking-[1px]">request callback</p>
-          </button>
-          <button className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
+          </Link>
+          <Link
+            href="/preAuth/register"
+            className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
+          >
             <img draggable="false" src="/LandingPageImages/signup.svg" alt="" />
             <p className="tracking-[1px]">sign up</p>
-          </button>
+          </Link>
         </div>
         <div
           className={`${styles.imageTransition1} rounded-full mx-auto sm:max-w-[400px] xl:mx-0 md:max-w-[697px] md:h-[683px]`}

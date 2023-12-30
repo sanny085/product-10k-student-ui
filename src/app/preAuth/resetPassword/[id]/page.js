@@ -1,15 +1,14 @@
 "use client";
-import { useParams } from "next/navigation";
 import styles from "../../Login/Login.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const ResetPassword = () => {
   const [registerForPasswordReset, setRegisterForPasswordReset] =
     useState(false);
   const [isPasswordReset, setPasswordReset] = useState(false);
-  const {push} = useRouter();
-  const params = useParams();
+  const { push } = useRouter();
   const handleConvertNum = (event) => {
     const inputValue = event.target.value.replace(/\D/g, "");
     event.target.value = inputValue;
@@ -202,15 +201,15 @@ const ResetPassword = () => {
             src="/Login_Images/2 51.png"
             alt=""
           />
-          <div
-            onClick={() => push("/")}
+          <Link
+            href="/"
             className="flex absolute top-[80px] items-center right-[57px] gap-[10px] text-white px-[16px] py-[8px]"
           >
             <img src="/Login_Images/Home.svg" alt="" />{" "}
             <span className="text-[12px] cursor-pointer font-bold leading-[normal]">
               Go to Home
             </span>
-          </div>
+          </Link>
         </div>
         {!registerForPasswordReset ? (
           <PasswordRecovery />
