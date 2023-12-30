@@ -1,5 +1,5 @@
 "use client";
-import styles from "../../Login/Login.module.css";
+import styles from "../../login/Login.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
