@@ -5,7 +5,7 @@ import {
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <PageHeader />
