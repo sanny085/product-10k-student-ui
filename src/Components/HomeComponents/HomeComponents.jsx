@@ -7,7 +7,7 @@ import HereAboutUs from "./HereAboutUs/HereAboutUs";
 import Joinus from "./Joinus/JoinUs";
 import PageFooter from "@/widgets/PageFooter/PageFooter";
 
-export default function HomePageComponents({ successStories, curriculum }) {
+export default function HomeComponents({ successStories, curriculum }) {
   return (
     <>
       <LandingPage />
