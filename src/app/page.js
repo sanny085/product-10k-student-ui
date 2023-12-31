@@ -8,7 +8,7 @@ import PageHeader from "@/widgets/PageHeader/PageHeader";
 // import Button from "@/components/Button";
 import Button from "@/widgets/Button";
 
-import HomeComponents from "@/components/HomeComponents/HomeComponents";
+import HomeComponents from "@/components/homeComponents/HomeComponents";
 
 export default function Home() {
   return (
