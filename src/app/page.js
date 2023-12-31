@@ -5,7 +5,8 @@ import {
   curriculum,
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
-import Button from "@/components/Button";
+// import Button from "@/components/Button";
+import Button from "@/widgets/Button";
 
 // import HomeComponents from "@/components/HomeComponents/HomeComponents";
 
