@@ -3,7 +3,7 @@ import styles from "./PageHeader.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-export default function PageHeader() {
+export default function PageHeader({ handleRequestModal }) {
   const [activeItem, setActiveItem] = useState("Home");
 
   const { push } = useRouter();
@@ -15,11 +15,13 @@ export default function PageHeader() {
     setActiveItem(item);
   };
   return (
-    <nav className="mt-[20px] sm:w-full mb-[30px] sm:px-[10px] md:px-[20px] items-center flex justify-between">
-      <img
-        src="/LandingPageImages/10k_Logo.svg"
-        className={`w-[132px] h-[46px] ${styles.logo} flex-shrink-0`}
-      />
+    <nav className="mt-[20px] sm:w-full }mb-[30px] sm:px-[10px] md:px-[20px] items-center flex justify-between">
+      <Link href="/">
+        <img
+          src="/LandingPageImages/10k_Logo.svg"
+          className={`w-[132px] h-[46px] ${styles.logo} flex-shrink-0`}
+        />
+      </Link>
       <section
         className={`flex ${styles.menuSection} justify-end sm:gap-x-[15px] md:gap-x-[36px] font-bold sm:text-[16px] items-center`}
       >
@@ -70,17 +72,12 @@ export default function PageHeader() {
           </p>
           <p className="hover:text-[#FF8541] md:hidden">Login</p>
         </div>
-        {/* <button
+        <Link
           className={`bg-[#FF8541] ${styles.hide} sm:w-[90px] p-[10px] flex justify-center items-center md:w-[107px] sm:h-[39px] rounded-md text-white`}
+          href="preAuth/login"
         >
           Login
-        </button> */}
-        <a
-          href="/preAuth/login"
-          className={`bg-[#FF8541] ${styles.hide} sm:w-[90px] p-[10px] flex justify-center items-center md:w-[107px] sm:h-[39px] rounded-md text-white`}
-        >
-          Login
-        </a>
+        </Link>
       </section>
       <div className={styles.menuIcon} onClick={handleDropDown}>
         {dropDown ? (

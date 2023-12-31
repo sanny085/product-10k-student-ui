@@ -1,10 +1,10 @@
 "use client";
-import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
+// import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
 import styles from "./RequestCallBack.module.css";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 const RequestCallBack = () => {
-  const { push } = useRouter();
+  const [isTQModal, setTQmodal] = useState(false);
+
   const handleConvertNum = (event) => {
     const inputValue = event.target.value.replace(/\D/g, "");
     event.target.value = inputValue;
@@ -12,10 +12,7 @@ const RequestCallBack = () => {
   const handleThankYouModal = () => {
     setTQmodal(!isTQModal);
   };
-  const handleHomeRoute = () => {
-    push("/");
-  };
-  const [isTQModal, setTQmodal] = useState(false);
+
   return (
     <main className="flex lg:flex-row sm:flex-col">
       <section
@@ -166,9 +163,7 @@ const RequestCallBack = () => {
               </label>
             </div>
             <button
-              onClick={() => {
-                handleThankYouModal();
-              }}
+              onClick={handleThankYouModal}
               type="submit"
               className="w-full p-[12px] font-[600] text-center bg-[#FF8541] text-white text-[16px] rounded-[8px]"
             >
@@ -176,11 +171,10 @@ const RequestCallBack = () => {
             </button>
           </div>
         </form>
-        <ThankYouModal
-          handleHomeRoute={handleHomeRoute}
+        {/* <ThankYouModal
           isTQModal={isTQModal}
           handleThankYouModal={handleThankYouModal}
-        />
+        /> */}
       </section>
     </main>
   );
