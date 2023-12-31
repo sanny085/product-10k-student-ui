@@ -1,7 +1,8 @@
-import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
-import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
+// import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
+// import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
 
 const FreeLecture = () => {
+  const styles = "";
   return (
     <>
       <main
@@ -52,7 +53,7 @@ const FreeLecture = () => {
             />
           </div>
         </div>
-        <LandingPageFooter />
+        {/* <LandingPageFooter /> */}
       </main>
     </>
   );
