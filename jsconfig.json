@@ -3,11 +3,11 @@
     "baseUrl": "src/",
     "paths": {
       // "@/*": ["./src/*"],
-      "@/components/*": ["components/*"],
       "@/hooks/*": ["hooks/*"],
       "@/redux/*": ["redux/*"],
       "@/shared/*": ["shared/*"],
-      "@/widgets/*": ["widgets/*"]
+      "@/widgets/*": ["widgets/*"],
+      "@/components/*": ["components/*"]
     }
   }
 }

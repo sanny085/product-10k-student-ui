@@ -8,7 +8,7 @@ import PageHeader from "@/widgets/PageHeader/PageHeader";
 // import Button from "@/components/Button";
 import Button from "@/widgets/Button";
 
-// import HomeComponents from "@/components/HomeComponents/HomeComponents";
+import HomeComponents from "@/components/HomeComponents/HomeComponents";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       {/* <HomePage /> */}
       <PageHeader />
       <Button />
-      {/* <HomeComponents successStories={successStories} curriculum={curriculum} /> */}
+      <HomeComponents successStories={successStories} curriculum={curriculum} />
     </>
   );
 }
