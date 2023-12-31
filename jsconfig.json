@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/",
+    "baseUrl": "src/",
     "paths": {
       // "@/*": ["./src/*"],
-      "@/components/*": ["/components/*"],
+      "@/components/*": ["components/*"],
       "@/hooks/*": ["hooks/*"],
       "@/redux/*": ["redux/*"],
       "@/shared/*": ["shared/*"],
