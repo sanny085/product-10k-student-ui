@@ -5,7 +5,7 @@ import {
   curriculum,
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
-import HomePageComponents from "@/components/HomeComponents/index";
+import HomePageComponents from "@/components/HomeComponents/HomePageComponents";
 
 export default function Home() {
   return (
