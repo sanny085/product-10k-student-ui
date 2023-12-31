@@ -5,17 +5,13 @@ import {
   curriculum,
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
-// import Button from "@/components/Button";
-import Button from "@/widgets/Button";
 
-import HomeComponents from "@/allcomponents/homeComponents/HomeComponents";
+import HomeComponents from "components/homeComponents/HomeComponents";
 
 export default function Home() {
   return (
     <>
-      {/* <HomePage /> */}
       <PageHeader />
-      <Button />
       <HomeComponents successStories={successStories} curriculum={curriculum} />
     </>
   );
