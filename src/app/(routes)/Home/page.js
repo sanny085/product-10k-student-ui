@@ -1,4 +1,4 @@
-import HomePageComponents from "@/components/HomeComponents/index";
+// import HomePageComponents from "@/components/HomeComponents/index";
 import {
   successStories,
   curriculum,
@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <PageHeader />
-      <HomePageComponents
+      {/* <HomePageComponents
         successStories={successStories}
         curriculum={curriculum}
-      />
+      /> */}
     </>
   );
 }
