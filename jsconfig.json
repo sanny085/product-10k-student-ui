@@ -4,7 +4,10 @@
     "paths": {
       // "@/*": ["./src/*"],
       "@/components/*": ["components/*"],
-      "@/utils/*": ["utils/*"]
+      "@/hooks/*": ["hooks/*"],
+      "@/redux/*": ["redux/*"],
+      "@/shared/*": ["shared/*"],
+      "@/widgets/*": ["widgets/*"]
       // "@/components/*": ["components/*"]
     }
   }
