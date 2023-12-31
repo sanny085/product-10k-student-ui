@@ -8,7 +8,6 @@
       "@/redux/*": ["redux/*"],
       "@/shared/*": ["shared/*"],
       "@/widgets/*": ["widgets/*"]
-      // "@/components/*": ["components/*"]
     }
   }
 }
