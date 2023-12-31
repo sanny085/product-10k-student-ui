@@ -1,5 +1,5 @@
-import { LandingPageFooter } from "components/HomeComponents/LandingPage/LandingPage";
-import styles from "components/HomeComponents/LandingPage/LandingPage.module.css";
+import { LandingPageFooter } from "components/homeComponents/LandingPage/LandingPage";
+import styles from "components/homeComponents/LandingPage/LandingPage.module.css";
 
 const Scholarship = () => {
   return (
