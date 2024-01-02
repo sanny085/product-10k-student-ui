@@ -10,12 +10,11 @@ export default function Joinus() {
         <p className="text-white">Right Path for a</p>
         <p className={`${styles.text}`}>Bright Career</p>
       </div>
-      <p
-        className={`${styles.img_top_text}  lg:text-[82px] md:text-[62px] sm:text-[35px] xl:text-[101.443px]`}
-      >
-        10000 Coders
-      </p>
-      <img className={`${styles.img}`} src="/joinus/16 2.png" alt="" />
+      <img
+        className={`${styles.img}`}
+        src="/Footer_images/footer_image.png"
+        alt=""
+      />
     </main>
   );
 }

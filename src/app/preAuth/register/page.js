@@ -2,6 +2,8 @@
 import { useState } from "react";
 import styles from "./Register.module.css";
 import Link from "next/link";
+import Select from "react-select";
+import { GraduationOptions } from "../../../shared/staticData/register.json";
 
 export default function Register() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -9,7 +11,18 @@ export default function Register() {
     const inputValue = event.target.value.replace(/\D/g, "");
     event.target.value = inputValue;
   };
-
+  const style1 = {
+    control: (base, state) => ({
+      ...base,
+      border: 0,
+      boxShadow: "none",
+      "&:hover": {
+        borderColor: "#DAE8FF",
+      },
+      fontWeight: "bold",
+    }),
+  };
+  const options = GraduationOptions;
   const handleFileChange = (e) => {
     const fileInput = e.target;
     const file = fileInput.files[0];
@@ -44,7 +57,7 @@ export default function Register() {
               >
                 Name
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border w-full flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border gap-[8px] rounded-[8px] p-[5px] border w-full flex">
                 <img src="/RequestCallBack_images/profile.svg" alt="" />
                 <input
                   required
@@ -62,7 +75,7 @@ export default function Register() {
               >
                 Mobile Number
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/RequestCallBack_images/call.svg" alt="" />
                 <div className="flex relative flex-row items-center gap-[3px]  w-full md:gap-[4px]">
                   <span className="text-[#808080]  text-[13px] leading-[normal] font-[500]">
@@ -88,7 +101,7 @@ export default function Register() {
               >
                 Email ID
               </label>
-              <div className="border-[#DEDEDE] w-full gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] w-full gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/RequestCallBack_images/mail.svg" alt="" />
                 <input
                   required
@@ -145,7 +158,7 @@ export default function Register() {
               >
                 New Password
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/Login_Images/password.svg" alt="" />
                 <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
                   <input
@@ -168,7 +181,7 @@ export default function Register() {
               >
                 Re-enter Password
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/Login_Images/password.svg" alt="" />
                 <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
                   <input
@@ -191,22 +204,15 @@ export default function Register() {
               >
                 Highest Qualification
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border gap-[8px] rounded-[8px] px-[5px] border flex">
                 <img src="/Register_Images/Graduation_Icon.svg" alt="" />
-                <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
-                  <select
-                    required
-                    id="education"
-                    name="education"
-                    className="focus:outline-none w-full bg-white border-none text-[13px] text-[#808080]"
-                  >
-                    <option value="" disabled selected>
-                      Select Education
-                    </option>
-                    <option value="bachelors">Bachelor's Degree</option>
-                    <option value="btech">B-tech</option>
-                    {/* Add more options as needed */}
-                  </select>
+                <div className="flex flex-row focus-within:border-none items-center gap-[3px] w-full md:gap-[4px]">
+                  <Select
+                    styles={style1}
+                    className="w-full"
+                    isSearchable={false}
+                    options={options}
+                  />
                 </div>
               </div>
             </div>
@@ -218,7 +224,7 @@ export default function Register() {
                 >
                   Graduation Year
                 </label>
-                <div className="border w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
+                <div className="border focus-within:border-[#FF8541] w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
                   <img src="/Register_Images/Calender.svg" alt="" />
                   <input
                     id="Graduation Year"
@@ -238,7 +244,7 @@ export default function Register() {
                 >
                   Work Experience
                 </label>
-                <div className="border w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
+                <div className="border focus-within:border-[#FF8541] w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
                   <img src="/Register_Images/experience_icon.svg" alt="" />
                   <input
                     id="Graduation Year"
@@ -260,7 +266,7 @@ export default function Register() {
         </button>
         <p className="text-[12px] mx-auto text-[#747474] font-[600]">
           Already have an account?{" "}
-          <Link href="/Login" className="text-[#FF8541] cursor-pointer">
+          <Link href="/preAuth/login" className="text-[#FF8541] cursor-pointer">
             Login
           </Link>
         </p>

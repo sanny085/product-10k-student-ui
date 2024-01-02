@@ -1,14 +1,14 @@
+import ButtonComponent from "@/components/routeButton/button";
 import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
 import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
-
+import Link from "next/link";
 const Scholarship = () => {
   return (
     <>
       <main
-        className={`lg:w-[80%] ${styles.transition} pb-4 sm:w-[98%] md:w-[95%] mx-auto`}
+        className={`lg:w-[80%] ${styles.transition} pb-[7px] sm:w-[98%] md:w-[95%] mx-auto`}
       >
         <div className="flex xl:flex-row sm:flex-col-reverse justify-between items-start">
-          {/* Scholarship */}
           <div className="sm:mx-auto xl:mx-0 ">
             <div className="flex items-start flex-col gap-y-[30px] ">
               <div className="md:text-[52px] lg:mt-[54px] sm:mx-auto md:mx-0 sm:text-[38px] sm:leading-[45px] md:leading-[62px] w-fit font-bold">
@@ -29,21 +29,21 @@ const Scholarship = () => {
                 </p>
               </div>
             </div>
-            <button className="uppercase my-[24px] flex mx-auto justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-              <img
-                draggable="false"
-                src="/LandingPageImages/List_Icon.svg"
-                alt=""
-              />
-              <p>Take scholarship exam</p>
-            </button>
-            <button className="uppercase flex mx-auto my-[24px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#B7B7B7] text-[10px] font-semibold text-white">
-              <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-              <p>Request Call back</p>
-            </button>
+            <ButtonComponent
+              route="/preAuth/scholarshipExam"
+              img="/LandingPageImages/List_Icon.svg"
+              text="Take scholarship exam"
+              bg={"#FF8541"}
+            />
+            <ButtonComponent
+              route="/preAuth/requestCallBack"
+              img="/LandingPageImages/call.svg"
+              text="Request Call back"
+              bg={"#B7B7B7"}
+            />
           </div>
           <div
-            className={`${styles.imageTransition2} sm:mx-auto xl:mx-0 rounded-full sm:max-w-[400px] md:max-w-[591px] md:h-[591px]`}
+            className={`${styles.imageTransition2} sm:mx-auto xl:mx-0 rounded-full sm:max-w-[400px] md:max-w-[552px] md:h-[552px]`}
           >
             <img
               draggable="false"
@@ -53,7 +53,16 @@ const Scholarship = () => {
           </div>
         </div>
         <LandingPageFooter />
-      </main>
+      </main>{" "}
+      <div className="flex w-full px-[15px] font-bold md:justify-center bg-[#FF8541] sm:justify-around sm:text-[12px] md:text-[16px] text-white items-center py-[4px] gap-x-[34px]">
+        <p>Have Questions? Reach out at 9892201029</p>
+        <Link
+          href="/preAuth/requestCallBack"
+          className="text-[#FF8541] sm:text-center md:text-start cursor-pointer bg-white rounded-[8px] sm:-[5px] md:p-[10px] underline"
+        >
+          Request Callback
+        </Link>
+      </div>
     </>
   );
 };

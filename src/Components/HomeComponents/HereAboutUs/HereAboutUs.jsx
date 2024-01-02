@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import ButtonComponent from "@/components/routeButton/button";
+import Link from "next/link";
 export default function HereAboutUs() {
   return (
     <main className="bg-[#F6F0FF] py-[50px]">
@@ -32,12 +33,13 @@ export default function HereAboutUs() {
           alt=""
         />
       </div>
-      <Link href="/preAuth/requestCallBack"
-        className="uppercase sm:mx-auto mt-[35px] flex justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#9747FF] text-[10px] font-semibold text-white"
-      >
-        <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p className="tracking-[1px]">request callback</p>
-      </Link>
+      <ButtonComponent
+        route="/preAuth/requestCallBack"
+        img="/LandingPageImages/call.svg"
+        text="request callback"
+        w="297px"
+        bg="#9747FF"
+      />
     </main>
   );
 }

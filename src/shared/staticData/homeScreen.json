@@ -1,39 +1,57 @@
 {
   "successStories": [
     {
-      "name": "Tej",
-      "role": "Web Developer",
-      "companyLogo": "/succesStories_images/walmart_logo.png",
+      "name": "Sai Krishna",
+      "role": "Full Stack Developer",
+      "companyLogo": "/succesStories_images/Mckinley.png",
       "successStory": "I got four placement offers of 4.5 LPA, 5.5 LPA, 6.5 LPA, and 9.2 LPA from different companies. The team supported me a lot with my placement.",
-      "package": "9.2 L",
-      "Img": "/succesStories_images/success story 2.png",
+      "package": "7.5 L",
+      "Img": "/succesStories_images/Screenshot_20231204_100551 - Sai Krishna 2.png",
       "status": "First Job"
     },
     {
-      "name": "Akhil",
-      "role": "Web Developer",
-      "companyLogo": "/succesStories_images/walmart_logo.png",
-      "successStory": "Got a hike of 250% from civil engineer background to react developer all in a duration of 7 months. Thanks to the entire team.",
-      "package": "8 L",
-      "Img": "/succesStories_images/success story 1.png",
-      "status": "250% Hike"
+      "name": "Snehalatha",
+      "role": "Software Engineer",
+      "companyLogo": "/succesStories_images/aggne.png",
+      "successStory": "I got four placement offers of 4.5 LPA, 5.5 LPA, 6.5 LPA, and 9.2 LPA from different companies. The team supported me a lot with my placement.",
+      "package": "4.5 L",
+      "Img": "/succesStories_images/Remala Jaya sai snehalatha - jaysai snehalatha 1.png",
+      "status": "First Job"
     },
     {
       "name": "Manoj",
-      "role": "Web Developer",
-      "companyLogo": "/succesStories_images/walmart_logo.png",
-      "successStory": "10000coders helped me learn about real-time practices and work culture. Their guidance has helped a lot in finding the right career of becoming a web developer from being a BSc graduate.",
-      "package": "6.5 L",
-      "Img": "/succesStories_images/success story 3.png",
-      "status": "100% Hike"
+      "role": "Software Engineer",
+      "companyLogo": "/succesStories_images/aggne.png",
+      "successStory": "I got four placement offers of 4.5 LPA, 5.5 LPA, 6.5 LPA, and 9.2 LPA from different companies. The team supported me a lot with my placement.",
+      "package": "4.5 L",
+      "Img": "/succesStories_images/DSC_8595 1.png",
+      "status": "First Job"
     },
     {
-      "name": "Rohith",
-      "role": "Web Developer",
-      "companyLogo": "/succesStories_images/walmart_logo.png",
-      "successStory": "This institute has trained me so well that I have transformed from fearing whether I would get a job to becoming a developer",
-      "package": "6.5 L",
-      "Img": "/succesStories_images/success story 4.png",
+      "name": "Yashwanth",
+      "role": "Full Stack Developer",
+      "companyLogo": "/succesStories_images/doctorite .png",
+      "successStory": "I got four placement offers of 4.5 LPA, 5.5 LPA, 6.5 LPA, and 9.2 LPA from different companies. The team supported me a lot with my placement.",
+      "package": "4.2 L",
+      "Img": "/succesStories_images/Sai Krishna.png",
+      "status": "First Job"
+    },
+    {
+      "name": "Jahnavi",
+      "role": "Back End Developer",
+      "companyLogo": "/succesStories_images/Dhan Ai.png",
+      "successStory": "I got four placement offers of 4.5 LPA, 5.5 LPA, 6.5 LPA, and 9.2 LPA from different companies. The team supported me a lot with my placement.",
+      "package": "4 L",
+      "Img": "/succesStories_images/jhanvi.png",
+      "status": "First Job"
+    },
+    {
+      "name": "Ambika",
+      "role": "Full Stack Developer",
+      "companyLogo": "/succesStories_images/jackus.png",
+      "successStory": "I got four placement offers of 4.5 LPA, 5.5 LPA, 6.5 LPA, and 9.2 LPA from different companies. The team supported me a lot with my placement.",
+      "package": "4 L",
+      "Img": "/succesStories_images/ambika.png",
       "status": "First Job"
     }
   ],
@@ -98,5 +116,45 @@
         "Web performance optimization techniques"
       ]
     }
-  ]
+  ],
+  "HiringPartners": {
+    "primary": [
+      "/HiringPartners_images/primary/image1.png",
+      "/HiringPartners_images/primary/image2.png",
+      "/HiringPartners_images/primary/image3.png",
+      "/HiringPartners_images/primary/image4.png",
+      "/HiringPartners_images/primary/image5.png",
+      "/HiringPartners_images/primary/image6.png",
+      "/HiringPartners_images/primary/image7.png",
+      "/HiringPartners_images/primary/image1.png",
+      "/HiringPartners_images/primary/image2.png"
+    ],
+    "secondary": [
+      "/HiringPartners_images/secondary/image7.png",
+      "/HiringPartners_images/secondary/image8.png",
+      "/HiringPartners_images/secondary/image9.png",
+      "/HiringPartners_images/secondary/image10.png",
+      "/HiringPartners_images/secondary/image11.png",
+      "/HiringPartners_images/secondary/image12.png",
+      "/HiringPartners_images/secondary/image7.png",
+      "/HiringPartners_images/secondary/image8.png",
+      "/HiringPartners_images/secondary/image9.png",
+      "/HiringPartners_images/secondary/image10.png",
+      "/HiringPartners_images/secondary/image11.png",
+      "/HiringPartners_images/secondary/image12.png"
+    ],
+    "teritory": [
+      "/HiringPartners_images/teritory/image1.png",
+      "/HiringPartners_images/teritory/image2.png",
+      "/HiringPartners_images/teritory/image3.png",
+      "/HiringPartners_images/teritory/image4.png",
+      "/HiringPartners_images/teritory/image5.png",
+      "/HiringPartners_images/teritory/image6.png",
+      "/HiringPartners_images/teritory/image7.png",
+      "/HiringPartners_images/teritory/image1.png",
+      "/HiringPartners_images/teritory/image2.png",
+      "/HiringPartners_images/teritory/image3.png",
+      "/HiringPartners_images/teritory/image4.png"
+    ]
+  }
 }
