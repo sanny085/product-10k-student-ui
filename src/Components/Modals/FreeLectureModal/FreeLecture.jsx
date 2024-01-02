@@ -3,7 +3,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import styles from "./FreeLectureModal.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import ButtonComponent from "@/components/routeButton/button";
 export default function FreeLectureModal({ handleModal, isModalActive }) {
   const cancelButtonRef = useRef(null);
   return (

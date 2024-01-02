@@ -1,5 +1,5 @@
 "use client";
-import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
+// import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
 import styles from "./RequestCallBack.module.css";
 import { useState } from "react";
 const RequestCallBack = () => {
@@ -171,10 +171,10 @@ const RequestCallBack = () => {
             </button>
           </div>
         </form>
-        <ThankYouModal
+        {/* <ThankYouModal
           isTQModal={isTQModal}
           handleThankYouModal={handleThankYouModal}
-        />
+        /> */}
       </section>
     </main>
   );

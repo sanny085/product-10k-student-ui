@@ -1,200 +1,224 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import useToast from "@/hooks/useToast";
 import styles from "./Login.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Login() {
+  const { showErrorToast } = useToast();
   const [loginType, setLoginType] = useState("Mobile");
   const [isOTP, setOTP] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [forgotPassword, setForgotPassword] = useState(false);
   const { push } = useRouter();
+  useEffect(() => {
+    console.log(window.location);
+    const redirectTo = window.location.search
+      ? new URLSearchParams(window.location.search).get("redirectTo")
+      : null;
+
+    if (redirectTo) {
+      showErrorToast("Please login to access this page", "top-right", "light");
+
+      const currentUrl = window.location.href;
+      const updatedUrl = currentUrl.replace(
+        `?redirectTo=${encodeURIComponent(redirectTo)}`,
+        ""
+      );
+      window.history.replaceState({}, document.title, updatedUrl);
+    }
+  }, []);
 
   const handleConvertNum = (event) => {
     const inputValue = event.target.value.replace(/\D/g, "");
     event.target.value = inputValue;
   };
   const LoginForm = () => (
-    <form
-      className={`${styles.Login_form} mt-[10rem] h-[450px] rounded-[16px] px-[40px] py-[38px] flex flex-col mx-auto w-[454px] gap-[24px] bg-white`}
-    >
-      <p className="text-center w-full text-[24px] font-[600] leading-[normal]">
-        Login
-      </p>
-      <div className="flex flex-col gap-[8px]">
-        {loginType == "Mobile" ? (
-          <>
-            <label
-              className="block text-[13px] font-semibold  text-gray-900"
-              htmlFor="Mobile Number"
-            >
-              Mobile Number
-            </label>
-            <div
-              className={`border-[#DEDEDE] ${styles.focus} gap-[8px] rounded-[8px] py-1 px-[15px] border flex`}
-            >
-              <img src="/RequestCallBack_images/call.svg" alt="" />
-              <div className="flex relative flex-row items-center gap-[3px]  w-full md:gap-[4px]">
-                <span className="text-[#808080]  text-[13px] leading-[normal] font-[500]">
-                  +91
-                </span>
+    <>
+      <ToastContainer />
+
+      <form
+        className={`${styles.Login_form} mt-[10rem] h-[450px] rounded-[16px] px-[40px] py-[38px] flex flex-col mx-auto w-[454px] gap-[24px] bg-white`}
+      >
+        <p className="text-center w-full text-[24px] font-[600] leading-[normal]">
+          Login
+        </p>
+        <div className="flex flex-col gap-[8px]">
+          {loginType == "Mobile" ? (
+            <>
+              <label
+                className="block text-[13px] font-semibold  text-gray-900"
+                htmlFor="Mobile Number"
+              >
+                Mobile Number
+              </label>
+              <div
+                className={`border-[#DEDEDE] ${styles.focus} gap-[8px] rounded-[8px] py-1 px-[15px] border flex`}
+              >
+                <img src="/RequestCallBack_images/call.svg" alt="" />
+                <div className="flex relative flex-row items-center gap-[3px]  w-full md:gap-[4px]">
+                  <span className="text-[#808080]  text-[13px] leading-[normal] font-[500]">
+                    +91
+                  </span>
+                  <input
+                    required
+                    type="tele"
+                    id="Mobile Number"
+                    name="Mobile Number"
+                    maxLength={10}
+                    inputMode="numeric"
+                    onChange={handleConvertNum}
+                    className="focus:outline-none"
+                  />
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <label
+                className="block text-[13px] font-semibold  text-gray-900"
+                htmlFor="Email ID"
+              >
+                Email ID
+              </label>
+              <div className="border-[#DEDEDE]  focus-within:border-[#FF8541] focus-within:border  w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
+                <img src="/RequestCallBack_images/mail.svg" alt="" />
                 <input
                   required
-                  type="tele"
-                  id="Mobile Number"
-                  name="Mobile Number"
-                  maxLength={10}
-                  inputMode="numeric"
-                  onChange={handleConvertNum}
+                  type="email"
+                  id="Email ID"
+                  name="Email ID"
                   className="focus:outline-none"
                 />
               </div>
+            </>
+          )}
+          {!isOTP && loginType !== "Email" ? (
+            <div className="flex flex-col gap-[8px]">
+              <label
+                className="block text-[13px] font-semibold  text-gray-900"
+                htmlFor="OTP"
+              >
+                OTP
+              </label>
+              <div
+                className={`border-[#DEDEDE] ${styles.focus} w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex`}
+              >
+                <img src="/RequestCallBack_images/otp.svg" alt="" />
+                <input
+                  required
+                  type="text"
+                  maxLength="6"
+                  inputMode="numeric"
+                  pattern="\d*"
+                  id="OTP"
+                  name="OTP"
+                  className="focus:outline-none"
+                  onChange={handleConvertNum}
+                />
+              </div>
             </div>
-          </>
-        ) : (
-          <>
-            <label
-              className="block text-[13px] font-semibold  text-gray-900"
-              htmlFor="Email ID"
-            >
-              Email ID
-            </label>
-            <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
-              <img src="/RequestCallBack_images/mail.svg" alt="" />
-              <input
-                required
-                type="email"
-                id="Email ID"
-                name="Email ID"
-                className="focus:outline-none"
-              />
+          ) : loginType === "Email" ? (
+            <div className="flex w-full flex-col gap-[8px]">
+              <label
+                className="block text-[13px] font-semibold  text-gray-900"
+                htmlFor="Password"
+              >
+                Password
+              </label>
+              <div className="border-[#DEDEDE] px-[15px]  w-full gap-[8px] rounded-[8px] py-1 border items-center flex ">
+                <input
+                  required
+                  type={showPassword ? "password" : "text"}
+                  id="Password"
+                  name="Password"
+                  className="focus:outline-none w-full"
+                />
+                <img
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="cursor-pointer h-[21px]"
+                  src="/Login_Images/eye.svg"
+                  alt=""
+                />
+              </div>
             </div>
-          </>
-        )}
-        {!isOTP && loginType !== "Email" ? (
-          <div className="flex flex-col gap-[8px]">
-            <label
-              className="block text-[13px] font-semibold  text-gray-900"
-              htmlFor="OTP"
-            >
-              OTP
-            </label>
-            <div
-              className={`border-[#DEDEDE] ${styles.focus} w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex`}
-            >
-              <img src="/RequestCallBack_images/otp.svg" alt="" />
-              <input
-                required
-                type="text"
-                maxLength="6"
-                inputMode="numeric"
-                pattern="\d*"
-                id="OTP"
-                name="OTP"
-                className="focus:outline-none"
-                onChange={handleConvertNum}
-              />
-            </div>
-          </div>
-        ) : loginType === "Email" ? (
-          <div className="flex w-full flex-col gap-[8px]">
-            <label
-              className="block text-[13px] font-semibold  text-gray-900"
-              htmlFor="Password"
-            >
-              Password
-            </label>
-            <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border px-[15px]  w-full gap-[8px] rounded-[8px] py-1 border items-center flex ">
-              <input
-                required
-                type={showPassword ? "password" : "text"}
-                id="Password"
-                name="Password"
-                className="focus:outline-none w-full"
-              />
-              <img
-                onClick={() => setShowPassword(!showPassword)}
-                className="cursor-pointer h-[21px]"
-                src="/Login_Images/eye.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-      <div className="cursor-pointer flex justify-between text-[13px] font-[600]">
-        <p
-          onClick={() => {
-            loginType === "Mobile"
-              ? setLoginType("Email")
-              : setLoginType("Mobile");
-          }}
-          className="text-[#FF8541]"
-        >
-          {loginType === "Mobile"
-            ? "Login with Email"
-            : "Login with Phone Number"}
-        </p>
-        {loginType === "Email" ? (
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="cursor-pointer flex justify-between text-[13px] font-[600]">
           <p
             onClick={() => {
-              setForgotPassword(!forgotPassword);
+              loginType === "Mobile"
+                ? setLoginType("Email")
+                : setLoginType("Mobile");
             }}
-            className="text-[#747474]"
+            className="text-[#FF8541]"
           >
-            forgot password?
+            {loginType === "Mobile"
+              ? "Login with Email"
+              : "Login with Phone Number"}
           </p>
+          {loginType === "Email" ? (
+            <p
+              onClick={() => {
+                setForgotPassword(!forgotPassword);
+              }}
+              className="text-[#747474]"
+            >
+              forgot password?
+            </p>
+          ) : (
+            ""
+          )}
+        </div>
+        {loginType === "Email" ? (
+          <div className="flex text-[13px] font-[600] gap-[8px]">
+            <input
+              required
+              type="checkbox"
+              name="Remember me"
+              id="Remember me"
+              className=" checked:bg-[#FF8541]"
+            />
+            <label htmlFor="Remember me">Remember me</label>
+          </div>
         ) : (
           ""
         )}
-      </div>
-      {loginType === "Email" ? (
-        <div className="flex text-[13px] font-[600] gap-[8px]">
-          <input
-            required
-            type="checkbox"
-            name="Remember me"
-            id="Remember me"
-            className=" checked:bg-[#FF8541]"
-          />
-          <label htmlFor="Remember me">Remember me</label>
-        </div>
-      ) : (
-        ""
-      )}
-      {isOTP && loginType === "Mobile" ? (
-        <button
-          onClick={() => {
-            setOTP(!true);
-          }}
-          type="submit"
-          className="w-full p-[12px] font-[600] text-center bg-[#FF8541] text-white text-[16px] rounded-[8px]"
-        >
-          OTP
-        </button>
-      ) : (
-        <button
-          onClick={(e) => e.preventDefault()}
-          type="submit"
-          className="w-full p-[12px] font-[600] text-center bg-[#FF8541] text-white text-[16px] rounded-[8px]"
-        >
-          Login
-        </button>
-      )}
-      <p className="text-[12px] text-[#747474] text-center font-[600]">
-        Don't have account?{" "}
-        <Link
-          href="/preAuth/register"
-          className="text-[#FF8541] cursor-pointer"
-        >
-          Register
-        </Link>
-      </p>
-    </form>
+        {isOTP && loginType === "Mobile" ? (
+          <button
+            onClick={() => {
+              setOTP(!true);
+            }}
+            type="submit"
+            className="w-full p-[12px] font-[600] text-center bg-[#FF8541] text-white text-[16px] rounded-[8px]"
+          >
+            OTP
+          </button>
+        ) : (
+          <button
+            onClick={(e) => e.preventDefault()}
+            type="submit"
+            className="w-full p-[12px] font-[600] text-center bg-[#FF8541] text-white text-[16px] rounded-[8px]"
+          >
+            Login
+          </button>
+        )}
+        <p className="text-[12px] text-[#747474] text-center font-[600]">
+          Don't have account?{" "}
+          <Link
+            href="/preAuth/register"
+            className="text-[#FF8541] cursor-pointer"
+          >
+            Register
+          </Link>
+        </p>
+      </form>
+    </>
   );
   const PasswordRecovery = () => (
     <form
@@ -214,7 +238,7 @@ export default function Login() {
           className={`border-[#DEDEDE] ${styles.focus} gap-[8px] rounded-[8px] py-1 px-[15px] border flex`}
         >
           <img src="/RequestCallBack_images/call.svg" alt="" />
-          <div className="flex relative  flex-row items-center gap-[3px]  w-full md:gap-[4px]">
+          <div className="flex relative focus-within:border-[#FF8541] focus-within:border  flex-row items-center gap-[3px]  w-full md:gap-[4px]">
             <span className="text-[#808080]  text-[13px] leading-[normal] font-[500]">
               +91
             </span>

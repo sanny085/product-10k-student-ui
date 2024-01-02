@@ -7,11 +7,15 @@ import HereAboutUs from "./HereAboutUs/HereAboutUs";
 import Joinus from "./Joinus/JoinUs";
 import PageFooter from "@/widgets/PageFooter/PageFooter";
 
-export default function HomeComponents({ successStories, curriculum, HiringPartnersData }) {
+export default function HomeComponents({
+  successStories,
+  curriculum,
+  HiringPartnersData,
+}) {
   return (
     <>
       <LandingPage />
-      <HiringPartners  HiringPartnersData={HiringPartnersData}/>
+      <HiringPartners HiringPartnersData={HiringPartnersData} />
       <TeamExperts />
       <SucessStories successStoriesData={successStories} />
       <Courses curriculum={curriculum} />

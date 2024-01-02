@@ -1,17 +1,23 @@
-import HomeComponents from "@/components/HomeComponents/HomeComponents";
+// import HomePage from "./(routes)/home/page.js";
+
 import {
   successStories,
   curriculum,
-  HiringPartners
+  HiringPartners,
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
 
+import HomeComponents from "components/homeComponents/HomeComponents";
 
 export default function Home() {
   return (
     <>
       <PageHeader />
-      <HomeComponents successStories={successStories} HiringPartnersData={HiringPartners} curriculum={curriculum} />
+      <HomeComponents
+        successStories={successStories}
+        curriculum={curriculum}
+        HiringPartnersData={HiringPartners}
+      />
     </>
   );
 }
