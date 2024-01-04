@@ -1,5 +1,6 @@
 import { LandingPageFooter } from "components/homeComponents/LandingPage/LandingPage";
 import styles from "components/homeComponents/LandingPage/LandingPage.module.css";
+import Link from "next/link";
 
 const Scholarship = () => {
   return (
@@ -29,14 +30,16 @@ const Scholarship = () => {
                 </p>
               </div>
             </div>
-            <button className="uppercase my-[24px] flex mx-auto justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-              <img
-                draggable="false"
-                src="/LandingPageImages/List_Icon.svg"
-                alt=""
-              />
-              <p>Take scholarship exam</p>
-            </button>
+            <Link href="/postAuth/assessment">
+              <button className="uppercase my-[24px] flex mx-auto justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
+                <img
+                  draggable="false"
+                  src="/LandingPageImages/List_Icon.svg"
+                  alt=""
+                />
+                <p>Take scholarship exam</p>
+              </button>
+            </Link>
             <button className="uppercase flex mx-auto my-[24px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#B7B7B7] text-[10px] font-semibold text-white">
               <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
               <p>Request Call back</p>
