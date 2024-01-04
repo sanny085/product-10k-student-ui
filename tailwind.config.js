@@ -20,6 +20,17 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        aliceblue: "#ddf5ff",
+        dodgerblue: "#0071ce",
+        coral: "#ff8541",
+      },
+      fontFamily: {
+        "open-sans": "'Open Sans'",
+      },
+      fontSize: {
+        inherit: "inherit",
+      },
     },
   },
   plugins: [],
