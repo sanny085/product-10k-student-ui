@@ -171,10 +171,10 @@ const RequestCallBack = () => {
             </button>
           </div>
         </form>
-        {/* <ThankYouModal
+        <ThankYouModal
           isTQModal={isTQModal}
           handleThankYouModal={handleThankYouModal}
-        /> */}
+        />
       </section>
     </main>
   );

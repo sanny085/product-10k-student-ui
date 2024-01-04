@@ -126,16 +126,16 @@
       "/HiringPartners_images/primary/image5.png",
       "/HiringPartners_images/primary/image6.png",
       "/HiringPartners_images/primary/image7.png",
-      "/HiringPartners_images/primary/image1.png",
-      "/HiringPartners_images/primary/image2.png"
+      "/HiringPartners_images/primary/image8.png",
+      "/HiringPartners_images/primary/image9.png"
     ],
     "secondary": [
-      "/HiringPartners_images/secondary/image7.png",
-      "/HiringPartners_images/secondary/image8.png",
-      "/HiringPartners_images/secondary/image9.png",
-      "/HiringPartners_images/secondary/image10.png",
-      "/HiringPartners_images/secondary/image11.png",
-      "/HiringPartners_images/secondary/image12.png",
+      "/HiringPartners_images/secondary/image1.png",
+      "/HiringPartners_images/secondary/image2.png",
+      "/HiringPartners_images/secondary/image3.png",
+      "/HiringPartners_images/secondary/image4.png",
+      "/HiringPartners_images/secondary/image5.png",
+      "/HiringPartners_images/secondary/image6.png",
       "/HiringPartners_images/secondary/image7.png",
       "/HiringPartners_images/secondary/image8.png",
       "/HiringPartners_images/secondary/image9.png",
@@ -151,10 +151,11 @@
       "/HiringPartners_images/teritory/image5.png",
       "/HiringPartners_images/teritory/image6.png",
       "/HiringPartners_images/teritory/image7.png",
-      "/HiringPartners_images/teritory/image1.png",
-      "/HiringPartners_images/teritory/image2.png",
-      "/HiringPartners_images/teritory/image3.png",
-      "/HiringPartners_images/teritory/image4.png"
+      "/HiringPartners_images/teritory/image8.png",
+      "/HiringPartners_images/teritory/image8.png",
+      "/HiringPartners_images/teritory/image9.png",
+      "/HiringPartners_images/teritory/image10.png",
+      "/HiringPartners_images/teritory/image11.png"
     ]
   }
 }
