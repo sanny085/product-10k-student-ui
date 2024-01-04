@@ -1,14 +1,21 @@
 "use client";
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ClockIcon, CrossIcon } from "@/shared/svgIcons/classroom";
+import { ClockIcon, CrossIcon, LeftArrow } from "@/shared/svgIcons/classroom";
 export default function ProjectModal({ isModal, handleProjectModal }) {
   const cancelButtonRef = useRef(null);
-  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [allowUpload, setAllowUpload] = useState(false);
+  const [hostedLink, setHostedLink] = useState("");
+  const [repositoryLink, setRepositoryLink] = useState("");
 
-  const handleFileInputChange = (event) => {
-    const uploadedFiles = event.target.files;
-    setSelectedFiles(uploadedFiles);
+  const handleAllowUpload = () => setAllowUpload(!allowUpload);
+
+  const handleClear = (field) => {
+    if (field === "hosted") {
+      setHostedLink("");
+    } else if (field === "repository") {
+      setRepositoryLink("");
+    }
   };
   return (
     <Transition.Root show={isModal} as={Fragment}>
@@ -44,11 +51,17 @@ export default function ProjectModal({ isModal, handleProjectModal }) {
               <Dialog.Panel
                 className={` relative transform flex flex-col gap-[20px] overflow-hidden w-[600px] h-[600px] rounded-lg bg-white text-left transition-all sm:my-8  `}
               >
-                <div className="flex justify-between px-[10px] pt-[20px] items-center">
-                  <div className="flex gap-[10px]">
-                    <ClockIcon />
-                    30 mins
-                  </div>
+                <div className="flex justify-between px-[15px] mt-[20px] items-center">
+                  {!allowUpload ? (
+                    <div className="flex gap-[10px]">
+                      <ClockIcon /> 30 min
+                    </div>
+                  ) : (
+                    <div onClick={handleAllowUpload} className="flex items-center cursor-pointer gap-[10px]">
+                      <LeftArrow fill="black" />
+                      <p className="font-[700] text-[16px]">Go back</p>
+                    </div>
+                  )}
                   <div className="font-bold text-[24px]">
                     Build a Survey Form
                   </div>
@@ -56,7 +69,7 @@ export default function ProjectModal({ isModal, handleProjectModal }) {
                     <CrossIcon />
                   </div>
                 </div>
-                {!selectedFiles.length > 0 ? (
+                {!allowUpload ? (
                   <div className="flex flex-col gap-[20px]">
                     <div className="px-[46px]">
                       Design and create an HTML survey form for collecting
@@ -94,25 +107,57 @@ export default function ProjectModal({ isModal, handleProjectModal }) {
                         </ol>
                       </p>
                     </div>
-                    <div className="mx-auto">
-                      <label className="font-bold rounded-[16px] text-white w-fit py-[16px] bg-[#FF8541] px-[24.5px] cursor-pointer">
-                        Upload Files
-                        <input
-                          type="file"
-                          style={{ display: "none" }}
-                          onChange={handleFileInputChange}
-                          multiple
-                        />
-                      </label>
-                    </div>
+                    <button
+                      onClick={handleAllowUpload}
+                      className="font-bold focus:outline-none rounded-[16px] mx-auto text-white w-fit py-[16px] bg-[#FF8541] px-[24.5px] cursor-pointer"
+                    >
+                      Upload Files
+                    </button>
                   </div>
                 ) : (
-                  <div className="pl-[50px]">
-                    <ul>
-                      {Array.from(selectedFiles).map((file, index) => (
-                        <li key={index}>{file.name}</li>
-                      ))}
-                    </ul>
+                  <div className="pl-[50px] mt-[20px] flex flex-col gap-[16px]">
+                    <label className="flex flex-col gap-[8px]">
+                      Upload Hosted Link:
+                      <div className="px-[10px] py-[5px] flex focus-within:border-[#FF8541] rounded-[8px] border border-[#B6B6B6] w-[367px] overflow-hidden focus-within:border">
+                        <input
+                          type="text"
+                          className="focus:outline-none w-[350px]"
+                          value={hostedLink}
+                          onChange={(e) => setHostedLink(e.target.value)}
+                        />
+                        {hostedLink && (
+                          <span
+                            onClick={() => handleClear("hosted")}
+                            className="cross-icon cursor-pointer"
+                          >
+                            &#10006;
+                          </span>
+                        )}
+                      </div>
+                    </label>
+
+                    <label className="flex flex-col gap-[8px]">
+                      Upload Repository / Code Sand Box Link:
+                      <div className="px-[10px] py-[5px] flex focus-within:border-[#FF8541] rounded-[8px] border border-[#B6B6B6] w-[367px] overflow-hidden focus-within:border">
+                        <input
+                          className="focus:outline-none w-[350px] "
+                          type="text"
+                          value={repositoryLink}
+                          onChange={(e) => setRepositoryLink(e.target.value)}
+                        />
+                        {repositoryLink && (
+                          <span
+                            onClick={() => handleClear("repository")}
+                            className="cross-icon cursor-pointer"
+                          >
+                            &#10006;
+                          </span>
+                        )}
+                      </div>
+                    </label>
+                    <button className="font-bold focus:outline-none rounded-[16px] text-white w-fit py-[10px] bg-[#FF8541] px-[24.5px] cursor-pointer">
+                      Submit
+                    </button>
                   </div>
                 )}
               </Dialog.Panel>

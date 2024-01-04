@@ -12,10 +12,13 @@ import {
 import { useState } from "react";
 import styles from "./sideBar.module.css";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
+
 
 export default function SideBarClassroom() {
   const [activeItem, setActiveItem] = useState("Home");
+ const params = useParams()
+ console.log(params)
   const Items = [
     {
       text: "Home",
@@ -78,7 +81,7 @@ export default function SideBarClassroom() {
   };
   return (
     <nav
-      className={` md:w-[200px] lg:w-[240px] flex-shrink-0 bg-white relative flex items-center justify-center h-[100vh] rounded-r-[32px] ${styles.shadow}`}
+      className={` fixed md:w-[200px] lg:w-[240px] flex-shrink-0 bg-white  flex items-center justify-center h-[100vh] rounded-r-[32px] ${styles.shadow}`}
     >
       <div className="top-[30px] left-[40px] absolute w-[132px] mt-[30px] h-[46px] mx-auto">
         <Image src="/LandingPageImages/10k_Logo.svg" alt="" fill />

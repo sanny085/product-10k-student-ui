@@ -29,7 +29,7 @@ export default function ReadDocument(){
  </div>
  <div className="flex flex-col  gap-[30px]">
    <div className="h-[320px] w-full relative overflow-hidden rounded-[16px]">
-     <Image src="/classroom_Images/doc1.png" fill/>
+     <Image alt="" src="/classroom_Images/doc1.png" fill/>
    </div>
    <div className="bg-white w-[640px] rounded-[16px] flex flex-col gap-[20px] p-[20px]">
      <div className="text-[#FF8541]">

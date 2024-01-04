@@ -37,7 +37,7 @@ export default function ThankYouModal({ handleThankYouModal, isTQModal }) {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel
-                className={`sm:w-[575px] sm:h-[322px] relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 md:w-[550px] ${styles.parent} bg-white flex flex-col gap-[16px] py-[24px] pb-20`}
+                className={`sm:w-[575px] sm:h-[322px] relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 md:w-[550px] ${styles.parent} flex flex-col gap-[16px] py-[24px] pb-20`}
               >
                 <div className="text-[#289C26] text-[16px] items-center font-bold leading-[normal] mx-auto w-fit gap-[10px] flex">
                   <GreenTick /> Request submitted
