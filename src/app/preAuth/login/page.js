@@ -5,6 +5,7 @@ import useToast from "@/hooks/useToast";
 import styles from "./Login.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Login() {
   const { showErrorToast } = useToast();
@@ -83,7 +84,7 @@ export default function Login() {
               >
                 Email ID
               </label>
-              <div className="border-[#DEDEDE] w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
+              <div className="border-[#DEDEDE]  focus-within:border-[#FF8541] focus-within:border  w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
                 <img src="/RequestCallBack_images/mail.svg" alt="" />
                 <input
                   required
@@ -237,7 +238,7 @@ export default function Login() {
           className={`border-[#DEDEDE] ${styles.focus} gap-[8px] rounded-[8px] py-1 px-[15px] border flex`}
         >
           <img src="/RequestCallBack_images/call.svg" alt="" />
-          <div className="flex relative flex-row items-center gap-[3px]  w-full md:gap-[4px]">
+          <div className="flex relative focus-within:border-[#FF8541] focus-within:border  flex-row items-center gap-[3px]  w-full md:gap-[4px]">
             <span className="text-[#808080]  text-[13px] leading-[normal] font-[500]">
               +91
             </span>
@@ -264,7 +265,7 @@ export default function Login() {
         >
           Registered Email ID
         </label>
-        <div className="border-[#DEDEDE] w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
+        <div className="border-[#DEDEDE] w-full focus-within:border-[#FF8541] focus-within:border gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
           <img src="/RequestCallBack_images/mail.svg" alt="" />
           <input
             required
@@ -284,33 +285,61 @@ export default function Login() {
       </button>
     </form>
   );
+
   return (
     <main className="flex lg:flex-row">
       <section
-        className={`lg:w-[50%] bg-[#747474] ${styles.left_section} h-[100vh] overflow-auto gap-[24.5px] justify-center flex`}
+        className={`lg:w-[50%] bg-[#747474] ${styles.left_section} h-[100vh] overflow-auto gap-[30px] justify-center flex`}
       >
-        <div className={`${styles.image1}`}>
-          <img
-            draggable={false}
-            className={``}
-            src="/Login_Images/Frame 735.svg"
-            alt=""
-          />
-          <img
-            draggable={false}
-            className={``}
-            src="/Login_Images/Frame 735.svg"
-            alt=""
-          />
+        <div className="flex flex-col overflow-hidden">
+          <div className={`${styles.image1} h-fit pb-[15px]`}>
+            <img
+              draggable={false}
+              src="/Login_Images/studentImages1.png"
+              alt=""
+            />
+          </div>
+          <div className={`${styles.image1} h-fit pb-[15px]`}>
+            <img
+              draggable={false}
+              src="/Login_Images/studentImages1.png"
+              alt=""
+            />
+          </div>
         </div>
-        <div className={`${styles.image2}`}>
-          <img draggable={false} src="/Login_Images/Frame 735.svg" alt="" />
-          <img draggable={false} src="/Login_Images/Frame 735.svg" alt="" />
+        <div className="flex flex-col overflow-hidden">
+          <div className={`${styles.image2} h-fit pb-[15px]`}>
+            <img
+              draggable={false}
+              src="/Login_Images/studentImages2.png"
+              alt=""
+            />
+          </div>
+          <div className={`${styles.image2} h-fit pb-[15px]`}>
+            <img
+              draggable={false}
+              src="/Login_Images/studentImages2.png"
+              alt=""
+            />
+          </div>
         </div>
-        <div className={`${styles.image3}`}>
-          <img draggable={false} src="/Login_Images/Frame 735.svg" alt="" />
-          <img draggable={false} src="/Login_Images/Frame 735.svg" alt="" />
+        <div className="flex flex-col overflow-hidden">
+          <div className={`${styles.image3} h-fit pb-[15px]`}>
+            <img
+              draggable={false}
+              src="/Login_Images/studentImages3.png"
+              alt=""
+            />
+          </div>
+          <div className={`${styles.image3} h-fit pb-[15px]`}>
+            <img
+              draggable={false}
+              src="/Login_Images/studentImages3.png"
+              alt=""
+            />
+          </div>
         </div>
+    
       </section>
       <section className="lg:w-[50%]  flex justify-center relative h-[100vh] bg-[#332C60]">
         <div>

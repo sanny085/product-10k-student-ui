@@ -1,31 +1,21 @@
-.left_section {
-  overflow-y: hidden;
-}
 .image1 {
-  animation: top_to_bottom 4s linear 2s infinite;
+  animation: scrollyanime 20s linear 2s infinite;
 }
 .image3 {
-  animation: top_to_bottom 4s linear 2s infinite;
+  animation: scrollyanime 20s linear 2s infinite;
 }
 .image2 {
-  animation: bottom_to_top 4s linear 2s infinite;
+  animation: scrollyanime 20s linear 2s infinite reverse;
 }
-@keyframes top_to_bottom {
+@keyframes scrollyanime {
   from {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-600px);
+    transform: translateY(-100%);
   }
 }
-@keyframes bottom_to_top {
-  from {
-    transform: translateY(-600px);
-  }
-  to {
-    transform: translateY(-0px);
-  }
-}
+
 .border:focus-within {
   border: 1px solid #ff8541;
   border-radius: 8px;
@@ -38,5 +28,4 @@
 }
 .focus:focus-within {
   border: 1px solid #ff8541;
-  box-shadow: 0px 4px 9.4px 0px #ff8541;
 }

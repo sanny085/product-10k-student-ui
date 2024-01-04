@@ -34,7 +34,7 @@ const ResetPassword = () => {
           >
             Mobile Number
           </label>
-          <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+          <div className="border-[#DEDEDE] gap-[8px] focus-within:border-[#FF8541] focus-within:border rounded-[8px] p-[5px] border flex">
             <img src="/RequestCallBack_images/call.svg" alt="" />
             <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
               <input
@@ -59,7 +59,7 @@ const ResetPassword = () => {
         >
           Registered Email ID
         </label>
-        <div className="border-[#DEDEDE] w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
+        <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border w-full gap-[8px] rounded-[8px] py-1 px-[15px] border flex">
           <img src="/RequestCallBack_images/mail.svg" alt="" />
           <input
             required

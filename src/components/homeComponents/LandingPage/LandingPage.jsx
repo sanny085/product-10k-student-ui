@@ -1,8 +1,26 @@
+import ButtonComponent from "@/components/routeButton/button";
 import styles from "./LandingPage.module.css";
-import Link from "next/link";
+import Image from "next/image";
 export default function LandingPage() {
+  const Cards = [
+    "/LandingPageImages/card1.png",
+    "/LandingPageImages/card2.png",
+    "/LandingPageImages/card3.png",
+    "/LandingPageImages/card4.png",
+  ];
+  const Card = () => (
+    <div className={`${styles.cards_parent} pr-[25px] flex gap-x-[25px]`}>
+      {Cards.map((img, idx) => (
+        <section
+          className={`md:w-[384px] sm:w-[298px] flex-shrink-0 relative sm:h-[210px] md:h-[233px]`}
+        >
+          <Image draggable={false} key={idx} fill={true} src={img} alt="" />
+        </section>
+      ))}
+    </div>
+  );
   return (
-    <main className="lg:w-[85%] sm:w-[98%] md:w-[95%] mx-auto">
+    <main className="lg:w-[85%] pb-[6px] sm:w-[98%] md:w-[95%] mx-auto">
       <div className="flex xl:flex-row sm:flex-col-reverse justify-between ">
         <div className="sm:mx-auto xl:mx-0">
           <div className="flex items-start flex-col gap-y-[30px]">
@@ -11,30 +29,49 @@ export default function LandingPage() {
               <p className={`${styles.text_linear_gradient}`}>Bright Career</p>
             </div>
             <div
-              className={`${styles.quotecard_card_parent} h-[230px] py-[10px] sm:px-[29px] md:px-[5px] sm:mx-auto md:mx-0 sm:w-[300px] md:w-[400px] `}
+              className={` px-[16px] flex py-[11px] overflow-hidden sm:w-[300px] md:w-[409px] md:h-[245px]`}
             >
-              <QuoteCard />
-              <QuoteCard />
-              <QuoteCard />
-              <QuoteCard />
-              <QuoteCard />
-              <QuoteCard />
+              <div>
+                <Card />
+              </div>
+              <div>
+                <Card />
+              </div>
+              <div>
+                <div
+                  className={`${styles.cards_parent} pr-[25px] flex gap-x-[25px]`}
+                >
+                  {Cards.map((img, idx) => (
+                    <section
+                      className={`w-[384px] flex-shrink-0 relative h-[233px]`}
+                    >
+                      <Image
+                        draggable={false}
+                        key={idx}
+                        fill={true}
+                        src={img}
+                        alt=""
+                      />
+                    </section>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-          <Link
-            href="/preAuth/requestCallBack"
-            className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
-          >
-            <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-            <p className="tracking-[1px]">request callback</p>
-          </Link>
-          <Link
-            href="/preAuth/register"
-            className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
-          >
-            <img draggable="false" src="/LandingPageImages/signup.svg" alt="" />
-            <p className="tracking-[1px]">sign up</p>
-          </Link>
+          <ButtonComponent
+            route="/preAuth/requestCallBack"
+            img="/LandingPageImages/call.svg"
+            text="request callback"
+            w="297px"
+            bg="#FF8541"
+          />
+          <ButtonComponent
+            route="/preAuth/register"
+            img="/LandingPageImages/signup.svg"
+            text="register"
+            w="297px"
+            bg={"#62B8FF"}
+          />
         </div>
         <div
           className={`${styles.imageTransition1} rounded-full mx-auto sm:max-w-[400px] xl:mx-0 md:max-w-[697px] md:h-[683px]`}
@@ -52,71 +89,31 @@ export default function LandingPage() {
   );
 }
 
-const QuoteCard = () => {
-  return (
-    <section
-      className={`md:min-w-[384px] sm:min-w-[280px] py-[11px] px-[8px] h-[210px] ${styles.quotecard_linear_gradient}`}
-    >
-      <img
-        draggable="false"
-        src="/LandingPageImages/Open_Quote.svg"
-        className="float-left sm:h-3 md:h-auto md:w-auto"
-        alt=""
-      />
-      <div className="py-[11.8px] mb-[6px]">
-        <p className="uppercase md:w-[332px] text-center mx-auto font-bold tracking-[1px] leading-3 sm:text-[8px] md:text-[10px]">
-          The concern they showed towards their students was different from
-          other institutions. The training experience was excellent
-        </p>
-        <img
-          draggable="false"
-          src="/LandingPageImages/Closed_Quote.svg"
-          className=" sm:h-3 md:h-auto md:w-auto float-right"
-          alt=""
-        />
-      </div>
-      <div className="uppercase items-center mx-auto sm:w-[200px] md:w-[235px] flex sm:text-[8px] md:text-[10px] font-semibold gap-x-[17px] text-[#FF8541]">
-        <p>venu bandi, cse</p>
-        <img
-          draggable="false"
-          src="/LandingPageImages/Right_Arrow.svg"
-          alt=""
-        />
-        <p>react dev</p>
-      </div>
-      <img
-        draggable="false"
-        src="/LandingPageImages/Student_image.svg"
-        className="mx-auto  mt-[6px] w-[90x] h-[90px] "
-        alt=""
-      />
-    </section>
-  );
-};
-
 export const LandingPageFooter = () => {
+  const textData = [
+    "Experienced faculty",
+    "100+ hiring partners",
+    "project-based learning",
+    "soft skills training",
+    "placement assistance",
+  ];
   return (
-    <div className="flex uppercase flex-wrap sm:text-[12px]  md:text-[13px] font-semibold xl:my-0 sm:my-4 w-full xl:justify-between justify-center ">
-      <div className="flex gap-x-[10px] w-[235px] items-center p-[10px]">
-        <img draggable="false" src="/LandingPageImages/starimage.svg" alt="" />
-        <p>Experienced faculty</p>
-      </div>
-      <div className="flex gap-x-[10px] w-[235px] items-center p-[10px]">
-        <img draggable="false" src="/LandingPageImages/starimage.svg" alt="" />
-        <p>100+ hiring partners</p>
-      </div>
-      <div className="flex gap-x-[10px] w-[235px] items-center p-[10px]">
-        <img draggable="false" src="/LandingPageImages/starimage.svg" alt="" />
-        <p>project-based learning</p>
-      </div>
-      <div className="flex gap-x-[10px] w-[235px] items-center p-[10px]">
-        <img draggable="false" src="/LandingPageImages/starimage.svg" alt="" />
-        <p>soft skills training</p>
-      </div>
-      <div className="flex gap-x-[10px] w-[235px] items-center p-[10px]">
-        <img draggable="false" src="/LandingPageImages/starimage.svg" alt="" />
-        <p>placement assistance</p>
-      </div>
+    <div className="flex uppercase flex-wrap sm:text-[12px] md:text-[13px] font-semibold sm:my-4 md:my-0 w-full xl:justify-between justify-center ">
+      {textData.map((text, idx) => (
+        <div
+          key={idx}
+          className="flex gap-x-[10px] w-[235px] items-center p-[10px]"
+        >
+          <Image
+            draggable="false"
+            src="/LandingPageImages/starimage.svg"
+            alt=""
+            width={22}
+            height={22}
+          />
+          <p>{text}</p>
+        </div>
+      ))}
     </div>
   );
 };

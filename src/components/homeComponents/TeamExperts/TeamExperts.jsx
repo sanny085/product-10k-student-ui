@@ -1,3 +1,4 @@
+import ButtonComponent from "@/components/routeButton/button";
 import styles from "./TeamExperts.module.css";
 import Link from "next/link";
 
@@ -122,13 +123,12 @@ export function TeamExperts() {
           </div>
         </div>
       </section>
-      <Link
-        href="/preAuth/requestCallBack"
-        className="uppercase sm:mx-auto my-[32px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
-      >
-        <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p className="tracking-[1px]">request callback</p>
-      </Link>
+      <ButtonComponent
+        route="/preAuth/requestCallBack"
+        img="/LandingPageImages/call.svg"
+        text="request callback"
+        bg={"#FF8541"}
+      />
     </main>
   );
 }
