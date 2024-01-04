@@ -3,6 +3,7 @@
 import {
   successStories,
   curriculum,
+  HiringPartners,
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
 
@@ -12,7 +13,11 @@ export default function Home() {
   return (
     <>
       <PageHeader />
-      <HomeComponents successStories={successStories} curriculum={curriculum} />
+      <HomeComponents
+        successStories={successStories}
+        curriculum={curriculum}
+        HiringPartnersData={HiringPartners}
+      />
     </>
   );
 }

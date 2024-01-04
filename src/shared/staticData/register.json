@@ -1,0 +1,22 @@
+{
+  "GraduationOptions": [
+    { "value": "Graduation (Completed)", "label": "Graduation (Completed)" },
+    { "value": "Graduation (Ongoing)", "label": "Graduation (Ongoing)" },
+    {
+      "value": "Post Graduation (Completed)",
+      "label": "Post Graduation (Completed)"
+    },
+    {
+      "value": "Post Graduation (Ongoing)",
+      "label": "Post Graduation (Ongoing)"
+    },
+    {
+      "value": "12th / Intermediate",
+      "label": "12th / Intermediate"
+    },
+    {
+      "value": "Diploma",
+      "label": "Diploma"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Courses.module.css";
+import ButtonComponent from "@/components/routeButton/button";
 
 export default function Courses({ curriculum }) {
   const [activeModuleNum, setActiveModuleNum] = useState(0);
@@ -137,10 +138,13 @@ export default function Courses({ curriculum }) {
                 </div>
               </div>
             </div>
-            <button className="uppercase sm:mx-auto mb-[24px] mt-[36px] flex ml-[30px] justify-center md:w-[297px] md:h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white">
-              <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-              <p>request callback</p>
-            </button>
+            <ButtonComponent
+              route="/preAuth/requestCallBack"
+              img="/LandingPageImages/call.svg"
+              text="request callback"
+              w="297px"
+              bg="#FF8541"
+            />
           </div>
         </div>
       </section>
@@ -162,7 +166,7 @@ export default function Courses({ curriculum }) {
             <img
               draggable="false"
               className="w-full"
-              src="/courses_images/journey.svg"
+              src="/courses_images/map.png"
               alt=""
             />
           </div>
@@ -177,7 +181,7 @@ export default function Courses({ curriculum }) {
             alt=""
           />
         </div>
-        <div className="sm:w-[90%] lg:w-[90%]  mx-auto">
+        <div className="sm:w-[90%] lg:w-[90%] mx-auto">
           <p className="text-[#FF8541] ml-[25px] md:text-start md:text-[32px] sm:text-center sm:text-[24px] lg:text-[48px] font-semibold tracking-[4.8px] uppercase leading-[normal]">
             support
           </p>
@@ -238,13 +242,13 @@ export default function Courses({ curriculum }) {
           </div>
         </div>
       </section>
-      <Link
-        href="/preAuth/requestCallBack"
-        className="uppercase sm:mx-auto tracking-[1px] mb-[50px] mt-[36px] flex ml-[30px] justify-center w-[297px] h-[44px] p-[10px] gap-x-[10px] rounded-lg items-center bg-[#FF8541] text-[10px] font-semibold text-white"
-      >
-        <img draggable="false" src="/LandingPageImages/call.svg" alt="" />
-        <p>request callback</p>
-      </Link>
+      <ButtonComponent
+        route="/preAuth/requestCallBack"
+        img="/LandingPageImages/call.svg"
+        text="request callback"
+        w="297px"
+        bg="#FF8541"
+      />
     </>
   );
 }

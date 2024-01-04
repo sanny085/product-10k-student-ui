@@ -90,7 +90,7 @@ export default function PageHeader({ handleRequestModal }) {
             src="/LandingPageImages/menu-svgrepo-com.svg"
             className={`h-[30px] w-[30px] cursor-pointer`}
           />
-        )}
+        )}   
       </div>
     </nav>
   );
