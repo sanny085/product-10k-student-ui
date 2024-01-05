@@ -1,7 +1,7 @@
-import React from "react";
+import AssessmentComponent from "@/components/assessmentComponents/index";
 
 const Assessment = () => {
-  return <div>page</div>;
+  return <AssessmentComponent />;
 };
 
 export default Assessment;

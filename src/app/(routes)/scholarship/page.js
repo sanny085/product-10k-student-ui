@@ -30,7 +30,7 @@ const Scholarship = () => {
               </div>
             </div>
             <ButtonComponent
-              route="/preAuth/scholarshipExam"
+              route="/postAuth/assessment"
               img="/LandingPageImages/List_Icon.svg"
               text="Take scholarship exam"
               bg={"#FF8541"}
