@@ -1,4 +1,4 @@
-import ButtonComponent from "@/components/routeButton/button";
+import ButtonComponent from "components/routeButton/button";
 import styles from "./TeamExperts.module.css";
 import Link from "next/link";
 

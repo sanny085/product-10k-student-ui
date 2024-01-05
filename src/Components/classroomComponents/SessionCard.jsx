@@ -1,5 +1,5 @@
-"use client"
-import SessionModal from "@/components/Modals/sessionModal/sessionModal";
+"use client";
+import SessionModal from "components/Modals/sessionModal/sessionModal";
 import {
   DocIcon,
   GreenTickImage,
@@ -12,10 +12,13 @@ import { useState } from "react";
 const SessionCard = (props) => {
   const { type, img, title, date } = props;
   const [isSessionModal, setSessionModal] = useState(false);
-  const handleSessionModal = ()=> setSessionModal(!isSessionModal);
+  const handleSessionModal = () => setSessionModal(!isSessionModal);
   return (
     <>
-      <div onClick={handleSessionModal} className="rounded-[16px] cursor-pointer w-fit overflow-hidden">
+      <div
+        onClick={handleSessionModal}
+        className="rounded-[16px] cursor-pointer w-fit overflow-hidden"
+      >
         <div className="relative w-[255px] h-[106px]">
           <Image src={img} fill alt="" />
           {
@@ -36,7 +39,11 @@ const SessionCard = (props) => {
           <p className="text-[12px] font-[400]">{date}</p>
         </div>
       </div>
-      <SessionModal handleSessionModal={handleSessionModal} isSessionModal={isSessionModal} type={type} />
+      <SessionModal
+        handleSessionModal={handleSessionModal}
+        isSessionModal={isSessionModal}
+        type={type}
+      />
     </>
   );
 };

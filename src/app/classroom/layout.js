@@ -1,9 +1,9 @@
-import SideBarClassroom from "@/components/classroomComponents/classroomSlideBar/sideBar";
+import SideBarClassroom from "components/classroomComponents/SideBarClassroom";
 
 export default function HomeLayout({ children }) {
   return (
     <section>
-      <SideBarClassroom/>
+      <SideBarClassroom />
       <main>{children}</main>
     </section>
   );

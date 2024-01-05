@@ -1,6 +1,5 @@
-import ClassroomNavBar from "@/components/classroomComponents/classroomNavBar/nav";
-import SideBarClassroom from "@/components/classroomComponents/classroomSlideBar/sideBar";
-import SessionCard from "@/components/classroomComponents/sessionCard/sessionCard";
+import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import SessionCard from "components/classroomComponents/SessionCard";
 
 export default function ClassroomBonus() {
   return (
@@ -17,10 +16,12 @@ export default function ClassroomBonus() {
                 title="CSS inline, internal, external"
                 date="12/06/23"
               />
-              <SessionCard type="watch"
+              <SessionCard
+                type="watch"
                 img="/classroom_Images/thumbnail.png"
                 title="CSS inline, internal, external"
-                date="12/06/23" />
+                date="12/06/23"
+              />
             </div>
           </div>
           <div className="flex w-full flex-col gap-[20px]">
@@ -29,23 +30,35 @@ export default function ClassroomBonus() {
             </p>
             <div className="flex gap-[16px]">
               {" "}
-              <SessionCard type="document"  img="/classroom_Images/thumbnail.png"
+              <SessionCard
+                type="document"
+                img="/classroom_Images/thumbnail.png"
                 title="Selector Tags"
-                date="12/06/23"/>
-              <SessionCard type="document" img="/classroom_Images/thumbnail.png"
+                date="12/06/23"
+              />
+              <SessionCard
+                type="document"
+                img="/classroom_Images/thumbnail.png"
                 title="Selector Tags"
-                date="12/06/23" />
+                date="12/06/23"
+              />
             </div>
           </div>
           <div className="flex w-full flex-col gap-[20px]">
             <p className="text-[16px] font-bold leading-[normal]">Quiz</p>
             <div className="flex gap-[16px]">
-              <SessionCard type="quiz" img="/classroom_Images/thumbnail.png"
+              <SessionCard
+                type="quiz"
+                img="/classroom_Images/thumbnail.png"
                 title="CSS inline, internal, external"
-                date="12/06/23" />
-              <SessionCard type="quiz" img="/classroom_Images/thumbnail.png"
+                date="12/06/23"
+              />
+              <SessionCard
+                type="quiz"
+                img="/classroom_Images/thumbnail.png"
                 title="CSS inline, internal, external"
-                date="12/06/23" />
+                date="12/06/23"
+              />
             </div>
           </div>
         </div>

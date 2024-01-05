@@ -1,6 +1,5 @@
-import ClassroomNavBar from "@/components/classroomComponents/classroomNavBar/nav";
-import SideBarClassroom from "@/components/classroomComponents/classroomSlideBar/sideBar";
-import SessionCard from "@/components/classroomComponents/sessionCard/sessionCard";
+import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import SessionCard from "components/classroomComponents/SessionCard";
 import {
   ClockIcon,
   HeadingIcon,
