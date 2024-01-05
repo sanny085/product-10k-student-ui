@@ -46,9 +46,8 @@ export default function Projects() {
     );
   };
   return (
-    <main className="bg-[#DDF5FF] w-full md:gap-[35px] lg:gap-[50px] flex">
-      <SideBarClassroom />
-      <div className="mt-[40px] flex w-full flex-col gap-[40px]">
+    <main className="bg-[#DDF5FF] w-full min-h-[100vh] flex">
+      <div className="mt-[40px] ml-[220px] pl-[50px] flex w-full flex-col gap-[40px]">
         <ClassroomNavBar />
         {/* pending session */}
         <div className="flex w-full overflow-hidden flex-col mt-[70px] gap-[20px]">

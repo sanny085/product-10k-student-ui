@@ -1,6 +1,5 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import styles from "./FreeLectureModal.module.css";
 import Link from "next/link";
 import Image from "next/image";
 export default function FreeLectureModal({ handleModal, isModalActive }) {
