@@ -1,7 +1,10 @@
 "use client";
-import ButtonComponent from "@/components/routeButton/button";
-import { LandingPageFooter } from "components/HomeComponents/LandingPage/LandingPage";
-import styles from "components/HomeComponents/LandingPage/LandingPage.module.css";
+import ButtonComponent from "components/routeButton/button";
+import { LandingPageFooter } from "components/homeComponents/LandingPage/LandingPage";
+import styles from "components/homeComponents/LandingPage/LandingPage.module.css";
+
+// import { LandingPageFooter } from "components/HomeComponents/LandingPage/LandingPage";
+// import styles from "components/HomeComponents/LandingPage/LandingPage.module.css";
 import FreeLectureModal from "components/Modals/FreeLectureModal/FreeLecture";
 
 import Link from "next/link";
