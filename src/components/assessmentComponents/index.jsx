@@ -44,16 +44,16 @@ const AssessmentComponent = () => {
 
   const renderButtonInRow = (count) => {
     return (
-      <div className="flex flex-row items-start justify-start gap-[5px]">
+      <div className="flex flex-row items-start justify-start">
         {[0, 1, 2, 3, 4].map((button) => (
           <Button
             key={button}
             type="button"
             onClick={onQuestionChange}
-            className="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg
-                     transition duration-300 ease-in-out transform hover:bg-gray-300 mr-4 mb-4"
+            className="bg-gray-200 text-black font-semibold py-2 px-5 rounded-lg
+                     transition duration-300 ease-in-out transform hover:bg-gray-300 mr-3 mb-3"
           >
-            <span>{button}</span>
+            <span className="text-sm">{button}</span>
           </Button>
         ))}
       </div>
@@ -141,7 +141,7 @@ const AssessmentComponent = () => {
             {renderButtonInRow(5)}
             {renderButtonInRow(5)}
           </div>
-          <b className="absolute my-4 mx-[!important] top-[6px] left-[calc(50%_-_26.5px)] leading-[120%] inline-block z-[1]">
+          <b className="absolute my-4 mx-[!important] top-[15px] left-[calc(50%_-_26.5px)] leading-[120%] inline-block z-[1]">
             1/30
           </b>
         </div>
