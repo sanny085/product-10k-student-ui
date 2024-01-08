@@ -1,0 +1,42 @@
+.table {
+  width: 710px;
+  height: 17rem;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  overflow-y: scroll;
+}
+.table thead tr th {
+  width: 10%;
+}
+
+.table_parent {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border-radius: 16px;
+  scrollbar-width: thin;
+}
+.table_heading_text {
+  background: linear-gradient(90deg, #125da1 0%, #1cabcb 93.98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+}
+.table::-webkit-scrollbar {
+  width: 5px;
+  background-color: #efefef;
+}
+.table::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, rgb(18, 93, 161, 0.5) 0%, rgb(28, 171, 203,0.5) 93.98%);
+}
+.student_status {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #125da1 0%, #1cabcb 93.98%);
+  color: white;
+  width: 100%;
+}

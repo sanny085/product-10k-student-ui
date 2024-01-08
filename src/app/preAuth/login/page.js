@@ -14,7 +14,6 @@ export default function Login() {
   const [forgotPassword, setForgotPassword] = useState(false);
   const { push } = useRouter();
   useEffect(() => {
-    console.log(window.location);
     const redirectTo = window.location.search
       ? new URLSearchParams(window.location.search).get("redirectTo")
       : null;
