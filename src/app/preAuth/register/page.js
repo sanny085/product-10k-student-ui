@@ -53,10 +53,10 @@ export default function Register() {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log({
-      ...formData,
-      "Highest Qualificaiton": highestQualification.value,
-    });
+    // console.log({
+    //   ...formData,
+    //   "Highest Qualificaiton": highestQualification.value,
+    // });
   };
   return (
     <main className="flex h-[100vh] items-center justify-center">

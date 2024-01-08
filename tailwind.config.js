@@ -5,7 +5,6 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/widgets/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
@@ -27,6 +26,7 @@ module.exports = {
         coral: "#ff8541",
         Green: "#208837",
         Vivid_Tangelo: "#FF8541",
+        denim_Blue: "#156BA9"
       },
       fontFamily: {
         "open-sans": "'Open Sans'",
@@ -36,6 +36,5 @@ module.exports = {
       },
     },
   },
-  darkMode: "class",
-  plugins: [nextui()],
+  plugins: [],
 };

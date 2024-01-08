@@ -16,7 +16,6 @@ export default function SideBarClassroom() {
   const [activeItem, setActiveItem] = useState("Home");
   const boxShadow = { boxShadow: "2px 2px 8px 0px rgba(0, 0, 0, 0.25)" };
   const params = useParams();
-  console.log(params);
   const Items = [
     {
       text: "Home",

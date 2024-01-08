@@ -30,7 +30,7 @@ const RequestCallBack = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     handleThankYouModal();
-    console.log(formData)
+    // console.log(formData)
   };
 
   return (
