@@ -1,6 +1,6 @@
 "use client";
-import ProjectModal from "components/Modals/ProjectModal/projectModal";
-import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import ProjectModal from "@/components/Modals/ProjectModal/projectModal";
+import ClassroomNavBar from "@/components/classroomComponents/ClassroomNavBar";
 import { useState } from "react";
 
 export default function Projects() {

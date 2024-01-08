@@ -1,5 +1,5 @@
 "use client";
-import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import ClassroomNavBar from "@/components/classroomComponents/ClassroomNavBar";
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import styles from "./home.module.css";

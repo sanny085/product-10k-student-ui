@@ -1,5 +1,5 @@
 "use client";
-import SessionModal from "components/Modals/sessionModal/sessionModal";
+import SessionModal from "@/components/Modals/sessionModal/sessionModal";
 import {
   DocIcon,
   GreenTickImage,

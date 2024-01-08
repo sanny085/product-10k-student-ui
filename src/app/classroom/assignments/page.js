@@ -1,4 +1,4 @@
-import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import ClassroomNavBar from "@/components/classroomComponents/ClassroomNavBar";
 
 import { OrangeTickImage, VideoIcon } from "@/shared/svgIcons/classroom";
 
@@ -71,5 +71,4 @@ export default function Assignment() {
       </div>
     </main>
   );
-  d;
 }

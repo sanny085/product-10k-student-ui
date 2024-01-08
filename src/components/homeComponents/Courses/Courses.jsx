@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Courses.module.css";
-import ButtonComponent from "components/routeButton/button";
+import ButtonComponent from "@/components/routeButton/button";
 
 export default function Courses({ curriculum }) {
   const [activeModuleNum, setActiveModuleNum] = useState(0);
