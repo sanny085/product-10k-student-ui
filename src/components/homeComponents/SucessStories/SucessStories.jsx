@@ -1,4 +1,4 @@
-import ButtonComponent from "@/components/routeButton/button";
+import ButtonComponent from "components/routeButton/button";
 import StudentCard from "../../StudentCard/StudentCard";
 import styles from "./SucessStories.module.css";
 import Link from "next/link";

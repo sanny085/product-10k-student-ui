@@ -1,4 +1,4 @@
-import ButtonComponent from "@/components/routeButton/button";
+import ButtonComponent from "components/routeButton/button";
 import styles from "./LandingPage.module.css";
 import Image from "next/image";
 export default function LandingPage() {

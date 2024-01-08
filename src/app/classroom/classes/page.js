@@ -1,6 +1,5 @@
-import ClassroomNavBar from "@/components/classroomComponents/classroomNavBar/nav";
-import SideBarClassroom from "@/components/classroomComponents/classroomSlideBar/sideBar";
-import SessionCard from "@/components/classroomComponents/sessionCard/sessionCard";
+import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import SessionCard from "components/classroomComponents/SessionCard";
 import {
   ClockIcon,
   HeadingIcon,
@@ -15,7 +14,6 @@ export default function Home() {
     <main className="bg-[#DDF5FF]  min-h-[100vh] flex">
       <div className="mt-[40px] pl-[50px] ml-[220px] flex w-full flex-col gap-[40px]">
         <ClassroomNavBar />
-        {/* upcomming session */}
         <div className="flex w-fit flex-col mt-[70px] gap-[12px]">
           <p className="text-[16px] font-bold leading-[normal]">
             Upcoming Session

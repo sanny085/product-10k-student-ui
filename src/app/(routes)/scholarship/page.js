@@ -1,6 +1,6 @@
-import ButtonComponent from "@/components/routeButton/button";
-import { LandingPageFooter } from "@/components/HomeComponents/LandingPage/LandingPage";
-import styles from "@/components/HomeComponents/LandingPage/LandingPage.module.css";
+import ButtonComponent from "components/routeButton/button";
+import { LandingPageFooter } from "components/HomeComponents/LandingPage/LandingPage";
+import styles from "components/HomeComponents/LandingPage/LandingPage.module.css";
 import Link from "next/link";
 const Scholarship = () => {
   return (

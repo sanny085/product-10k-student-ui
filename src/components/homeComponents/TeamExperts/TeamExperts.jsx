@@ -1,4 +1,4 @@
-import ButtonComponent from "@/components/routeButton/button";
+import ButtonComponent from "components/routeButton/button";
 import styles from "./TeamExperts.module.css";
 import Link from "next/link";
 
@@ -71,7 +71,7 @@ export function TeamExperts() {
               >
                 Praveen Kumar
               </p>
-              <div className="lg:h-[28px]  sm:flex-wrap md:flex-nowrap gap-[10px] lg:w-[228px] items-start  flex lg:gap-x-[23px]">
+              <div className="lg:h-[28px] sm:flex-wrap md:flex-nowrap gap-[10px] w-fit items-start  flex lg:gap-x-[23px]">
                 <img
                   draggable="false"
                   className="h-full"

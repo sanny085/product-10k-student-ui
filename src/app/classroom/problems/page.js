@@ -1,5 +1,4 @@
-import ClassroomNavBar from "@/components/classroomComponents/classroomNavBar/nav";
-import SideBarClassroom from "@/components/classroomComponents/classroomSlideBar/sideBar";
+import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
 
 export default function ClassroomProblems() {
   return (

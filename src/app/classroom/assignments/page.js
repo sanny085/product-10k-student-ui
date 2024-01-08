@@ -1,10 +1,6 @@
-import ClassroomNavBar from "@/components/classroomComponents/classroomNavBar/nav";
-import SideBarClassroom from "@/components/classroomComponents/classroomSlideBar/sideBar";
+import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
 
-import {
-  OrangeTickImage,
-  VideoIcon,
-} from "@/shared/svgIcons/classroom";
+import { OrangeTickImage, VideoIcon } from "@/shared/svgIcons/classroom";
 
 export default function Assignment() {
   const PendingCard = () => {
@@ -74,5 +70,6 @@ export default function Assignment() {
         {/* <WriteCode/> */}
       </div>
     </main>
-  );d
+  );
+  d;
 }
