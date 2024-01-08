@@ -7,9 +7,27 @@ import { GraduationOptions } from "../../../shared/staticData/register.json";
 
 export default function Register() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const handleConvertNum = (event) => {
-    const inputValue = event.target.value.replace(/\D/g, "");
-    event.target.value = inputValue;
+  const [highestQualification, setHighestQualification] = useState({});
+  const [formData, setFormData] = useState({
+    Name: "",
+    "Mobile Number": null,
+    "Email ID": "",
+    "New Password": "",
+    "Re-enter Password": "",
+    "Graduation Year": null,
+    "Work Experience": "",
+  });
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const sanitizedValue =
+      name === "Mobile Number" || name === "Graduation Year"
+        ? value.replace(/\D/g, "")
+        : value;
+    const inputValue = type === "checkbox" ? checked : sanitizedValue;
+    setFormData({
+      ...formData,
+      [name]: inputValue,
+    });
   };
   const style1 = {
     control: (base, state) => ({
@@ -33,9 +51,19 @@ export default function Register() {
       setSelectedFile(fileURL);
     }
   };
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log({
+      ...formData,
+      "Highest Qualificaiton": highestQualification.value,
+    });
+  };
   return (
     <main className="flex h-[100vh] items-center justify-center">
-      <form className="py-[38px] border shadow-md flex flex-col  lg:w-[866px] md:w-[768px] gap-[32px] rounded-[16px] px-[40px] ">
+      <form
+        onSubmit={handleFormSubmit}
+        className="py-[38px] border shadow-md flex flex-col  lg:w-[866px] md:w-[768px] gap-[32px] rounded-[16px] px-[40px] "
+      >
         <div className="flex justify-center relative gap-[32px] items-end w-full">
           <div className="flex absolute left-0 gap-[10px] items-start font-[700] text-[12px] tracking-wide">
             <img src="/Register_Images/home.svg" alt="" />
@@ -64,6 +92,8 @@ export default function Register() {
                   type="text"
                   id="Name"
                   name="Name"
+                  onChange={handleInputChange}
+                  value={formData.Name}
                   className="focus:outline-none"
                 />
               </div>
@@ -83,13 +113,14 @@ export default function Register() {
                   </span>
                   <input
                     required
-                    type="tele"
+                    type="tel"
                     id="Mobile Number"
                     name="Mobile Number"
                     maxLength={10}
                     inputMode="numeric"
-                    onChange={handleConvertNum}
+                    onChange={handleInputChange}
                     className="focus:outline-none "
+                    value={formData["Mobile Number"]}
                   />
                 </div>
               </div>
@@ -109,6 +140,8 @@ export default function Register() {
                   id="Email ID"
                   name="Email ID"
                   className="focus:outline-none"
+                  onChange={handleInputChange}
+                  value={formData["Email ID"]}
                 />
               </div>
             </div>
@@ -128,10 +161,10 @@ export default function Register() {
               </div>
               {selectedFile ? (
                 <div className="overflow-hidden rounded-[8px] relative border-[#DEDEDE] h-[60px] w-[60px]">
-                  <div className=" top-[2px] border-[3px] border-red-500 bg-white rounded-full  right-[2px] p-1 absolute">
+                  <div className=" top-[2px] border-[3px] border-red-500 bg-white rounded-full right-[2px] p-1 absolute">
                     <img
                       onClick={() => setSelectedFile(null)}
-                      className="h-2 w-2 cursor-pointer  "
+                      className="h-2 w-2 cursor-pointer"
                       src="/Register_Images/cross-mark-svgrepo-com.svg"
                       alt=""
                     />
@@ -167,6 +200,8 @@ export default function Register() {
                     id="New Password"
                     name="New Password"
                     maxLength={10}
+                    onChange={handleInputChange}
+                    value={formData["New Password"]}
                     inputMode="numeric"
                     placeholder="Minimum 8 Letters"
                     className="focus:outline-none placeholder:text-[13px]"
@@ -191,6 +226,8 @@ export default function Register() {
                     id="Re-enter Password"
                     name="Re-enter Password"
                     maxLength={10}
+                    onChange={handleInputChange}
+                    value={formData["Re-enter Password"]}
                     inputMode="numeric"
                     className="focus:outline-none placeholder:text-[13px]"
                   />
@@ -212,6 +249,8 @@ export default function Register() {
                     className="w-full"
                     isSearchable={false}
                     options={options}
+                    onChange={setHighestQualification}
+                    required
                   />
                 </div>
               </div>
@@ -231,9 +270,11 @@ export default function Register() {
                     placeholder="eg : 2023"
                     className=" w-full placeholder:text-[13px] focus:outline-none"
                     type="text"
-                    onChange={handleConvertNum}
+                    onChange={handleInputChange}
+                    value={formData["Graduation Year"]}
                     name="Graduation Year"
                     maxLength={4}
+                    required
                   />
                 </div>
               </div>
@@ -247,11 +288,14 @@ export default function Register() {
                 <div className="border focus-within:border-[#FF8541] w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
                   <img src="/Register_Images/experience_icon.svg" alt="" />
                   <input
-                    id="Graduation Year"
+                    id="Work Experience"
                     placeholder="eg : 2 years in BPO"
                     className=" w-full placeholder:text-[13px] focus:outline-none"
                     type="text"
-                    name="Graduation Year"
+                    onChange={handleInputChange}
+                    value={formData["Work Experience"]}
+                    name="Work Experience"
+                    required
                   />
                 </div>
               </div>

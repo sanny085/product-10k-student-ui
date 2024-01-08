@@ -3,7 +3,7 @@ import styles from "./PageHeader.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-export default function PageHeader({ handleRequestModal }) {
+export default function PageHeader() {
   const [activeItem, setActiveItem] = useState("Home");
 
   const { push } = useRouter();
@@ -40,7 +40,6 @@ export default function PageHeader({ handleRequestModal }) {
           </p>
           <Link href="/#Course">
             <p
-              onClick={() => handleNavBarNavigation("Course")}
               className={`${
                 activeItem === "Course"
                   ? "text-[#FF8541]"

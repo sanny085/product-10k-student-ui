@@ -14,7 +14,6 @@ export default function Home() {
     <main className="bg-[#DDF5FF]  min-h-[100vh] flex">
       <div className="mt-[40px] pl-[50px] ml-[220px] flex w-full flex-col gap-[40px]">
         <ClassroomNavBar />
-        {/* upcomming session */}
         <div className="flex w-fit flex-col mt-[70px] gap-[12px]">
           <p className="text-[16px] font-bold leading-[normal]">
             Upcoming Session

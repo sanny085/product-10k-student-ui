@@ -5,7 +5,6 @@ import useToast from "@/hooks/useToast";
 import styles from "./Login.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export default function Login() {
   const { showErrorToast } = useToast();
