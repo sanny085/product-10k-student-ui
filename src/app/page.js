@@ -7,7 +7,7 @@ import {
 } from "@/shared/staticData/homeScreen.json";
 import PageHeader from "@/widgets/PageHeader/PageHeader";
 
-import HomeComponents from "components/homeComponents/HomeComponents";
+import HomeComponents from "@/components/homeComponents/HomeComponents";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import SideBarClassroom from "components/classroomComponents/SideBarClassroom";
+import SideBarClassroom from "@/components/classroomComponents/SideBarClassroom";
 
 export default function HomeLayout({ children }) {
   return (
