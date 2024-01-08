@@ -2,14 +2,45 @@
 import { useState } from "react";
 import styles from "./Register.module.css";
 import Link from "next/link";
+import Select from "react-select";
+import { GraduationOptions } from "../../../shared/staticData/register.json";
 
 export default function Register() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const handleConvertNum = (event) => {
-    const inputValue = event.target.value.replace(/\D/g, "");
-    event.target.value = inputValue;
+  const [highestQualification, setHighestQualification] = useState({});
+  const [formData, setFormData] = useState({
+    Name: "",
+    "Mobile Number": null,
+    "Email ID": "",
+    "New Password": "",
+    "Re-enter Password": "",
+    "Graduation Year": null,
+    "Work Experience": "",
+  });
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const sanitizedValue =
+      name === "Mobile Number" || name === "Graduation Year"
+        ? value.replace(/\D/g, "")
+        : value;
+    const inputValue = type === "checkbox" ? checked : sanitizedValue;
+    setFormData({
+      ...formData,
+      [name]: inputValue,
+    });
   };
-
+  const style1 = {
+    control: (base, state) => ({
+      ...base,
+      border: 0,
+      boxShadow: "none",
+      "&:hover": {
+        borderColor: "#DAE8FF",
+      },
+      fontWeight: "bold",
+    }),
+  };
+  const options = GraduationOptions;
   const handleFileChange = (e) => {
     const fileInput = e.target;
     const file = fileInput.files[0];
@@ -20,9 +51,19 @@ export default function Register() {
       setSelectedFile(fileURL);
     }
   };
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log({
+      ...formData,
+      "Highest Qualificaiton": highestQualification.value,
+    });
+  };
   return (
     <main className="flex h-[100vh] items-center justify-center">
-      <form className="py-[38px] border shadow-md flex flex-col  lg:w-[866px] md:w-[768px] gap-[32px] rounded-[16px] px-[40px] ">
+      <form
+        onSubmit={handleFormSubmit}
+        className="py-[38px] border shadow-md flex flex-col  lg:w-[866px] md:w-[768px] gap-[32px] rounded-[16px] px-[40px] "
+      >
         <div className="flex justify-center relative gap-[32px] items-end w-full">
           <div className="flex absolute left-0 gap-[10px] items-start font-[700] text-[12px] tracking-wide">
             <img src="/Register_Images/home.svg" alt="" />
@@ -44,13 +85,15 @@ export default function Register() {
               >
                 Name
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border w-full flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border gap-[8px] rounded-[8px] p-[5px] border w-full flex">
                 <img src="/RequestCallBack_images/profile.svg" alt="" />
                 <input
                   required
                   type="text"
                   id="Name"
                   name="Name"
+                  onChange={handleInputChange}
+                  value={formData.Name}
                   className="focus:outline-none"
                 />
               </div>
@@ -62,7 +105,7 @@ export default function Register() {
               >
                 Mobile Number
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/RequestCallBack_images/call.svg" alt="" />
                 <div className="flex relative flex-row items-center gap-[3px]  w-full md:gap-[4px]">
                   <span className="text-[#808080]  text-[13px] leading-[normal] font-[500]">
@@ -70,13 +113,14 @@ export default function Register() {
                   </span>
                   <input
                     required
-                    type="tele"
+                    type="tel"
                     id="Mobile Number"
                     name="Mobile Number"
                     maxLength={10}
                     inputMode="numeric"
-                    onChange={handleConvertNum}
+                    onChange={handleInputChange}
                     className="focus:outline-none "
+                    value={formData["Mobile Number"]}
                   />
                 </div>
               </div>
@@ -88,7 +132,7 @@ export default function Register() {
               >
                 Email ID
               </label>
-              <div className="border-[#DEDEDE] w-full gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] w-full gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/RequestCallBack_images/mail.svg" alt="" />
                 <input
                   required
@@ -96,6 +140,8 @@ export default function Register() {
                   id="Email ID"
                   name="Email ID"
                   className="focus:outline-none"
+                  onChange={handleInputChange}
+                  value={formData["Email ID"]}
                 />
               </div>
             </div>
@@ -115,10 +161,10 @@ export default function Register() {
               </div>
               {selectedFile ? (
                 <div className="overflow-hidden rounded-[8px] relative border-[#DEDEDE] h-[60px] w-[60px]">
-                  <div className=" top-[2px] border-[3px] border-red-500 bg-white rounded-full  right-[2px] p-1 absolute">
+                  <div className=" top-[2px] border-[3px] border-red-500 bg-white rounded-full right-[2px] p-1 absolute">
                     <img
                       onClick={() => setSelectedFile(null)}
-                      className="h-2 w-2 cursor-pointer  "
+                      className="h-2 w-2 cursor-pointer"
                       src="/Register_Images/cross-mark-svgrepo-com.svg"
                       alt=""
                     />
@@ -145,7 +191,7 @@ export default function Register() {
               >
                 New Password
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/Login_Images/password.svg" alt="" />
                 <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
                   <input
@@ -154,6 +200,8 @@ export default function Register() {
                     id="New Password"
                     name="New Password"
                     maxLength={10}
+                    onChange={handleInputChange}
+                    value={formData["New Password"]}
                     inputMode="numeric"
                     placeholder="Minimum 8 Letters"
                     className="focus:outline-none placeholder:text-[13px]"
@@ -168,7 +216,7 @@ export default function Register() {
               >
                 Re-enter Password
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] gap-[8px] rounded-[8px] p-[5px] border flex">
                 <img src="/Login_Images/password.svg" alt="" />
                 <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
                   <input
@@ -178,6 +226,8 @@ export default function Register() {
                     id="Re-enter Password"
                     name="Re-enter Password"
                     maxLength={10}
+                    onChange={handleInputChange}
+                    value={formData["Re-enter Password"]}
                     inputMode="numeric"
                     className="focus:outline-none placeholder:text-[13px]"
                   />
@@ -191,22 +241,17 @@ export default function Register() {
               >
                 Highest Qualification
               </label>
-              <div className="border-[#DEDEDE] gap-[8px] rounded-[8px] p-[5px] border flex">
+              <div className="border-[#DEDEDE] focus-within:border-[#FF8541] focus-within:border gap-[8px] rounded-[8px] px-[5px] border flex">
                 <img src="/Register_Images/Graduation_Icon.svg" alt="" />
-                <div className="flex relative flex-row items-center gap-[3px] w-full md:gap-[4px]">
-                  <select
+                <div className="flex flex-row focus-within:border-none items-center gap-[3px] w-full md:gap-[4px]">
+                  <Select
+                    styles={style1}
+                    className="w-full"
+                    isSearchable={false}
+                    options={options}
+                    onChange={setHighestQualification}
                     required
-                    id="education"
-                    name="education"
-                    className="focus:outline-none w-full bg-white border-none text-[13px] text-[#808080]"
-                  >
-                    <option value="" disabled selected>
-                      Select Education
-                    </option>
-                    <option value="bachelors">Bachelor's Degree</option>
-                    <option value="btech">B-tech</option>
-                    {/* Add more options as needed */}
-                  </select>
+                  />
                 </div>
               </div>
             </div>
@@ -218,16 +263,18 @@ export default function Register() {
                 >
                   Graduation Year
                 </label>
-                <div className="border w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
+                <div className="border focus-within:border-[#FF8541] w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
                   <img src="/Register_Images/Calender.svg" alt="" />
                   <input
                     id="Graduation Year"
                     placeholder="eg : 2023"
                     className=" w-full placeholder:text-[13px] focus:outline-none"
                     type="text"
-                    onChange={handleConvertNum}
+                    onChange={handleInputChange}
+                    value={formData["Graduation Year"]}
                     name="Graduation Year"
                     maxLength={4}
+                    required
                   />
                 </div>
               </div>
@@ -238,14 +285,17 @@ export default function Register() {
                 >
                   Work Experience
                 </label>
-                <div className="border w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
+                <div className="border focus-within:border-[#FF8541] w-full gap-[8px] p-2 flex border-[#DEDEDE] rounded-[8px]">
                   <img src="/Register_Images/experience_icon.svg" alt="" />
                   <input
-                    id="Graduation Year"
+                    id="Work Experience"
                     placeholder="eg : 2 years in BPO"
                     className=" w-full placeholder:text-[13px] focus:outline-none"
                     type="text"
-                    name="Graduation Year"
+                    onChange={handleInputChange}
+                    value={formData["Work Experience"]}
+                    name="Work Experience"
+                    required
                   />
                 </div>
               </div>
@@ -260,7 +310,7 @@ export default function Register() {
         </button>
         <p className="text-[12px] mx-auto text-[#747474] font-[600]">
           Already have an account?{" "}
-          <Link href="/Login" className="text-[#FF8541] cursor-pointer">
+          <Link href="/preAuth/login" className="text-[#FF8541] cursor-pointer">
             Login
           </Link>
         </p>

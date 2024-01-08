@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 const session = false;
 
-const protectedRoutes = ["/freeLecturedkfjh"];
+const protectedRoutes = ["/freeLecturedfs"];
 
 export default function middleware(request) {
   if (!session && protectedRoutes.includes(request.nextUrl.pathname)) {

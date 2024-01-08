@@ -1,0 +1,20 @@
+@media screen and (width>=320px) and (width<=640px) {
+  .parent {
+    width: 95%;
+    padding-block: 50px;
+    padding-inline: 20px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+  .para {
+  }
+  .btn {
+  }
+}
+.text_linear_gradient {
+  background: linear-gradient(90deg, #62b554 2.19%, #1e5515 62.19%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

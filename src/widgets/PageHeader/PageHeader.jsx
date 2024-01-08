@@ -3,7 +3,7 @@ import styles from "./PageHeader.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-export default function PageHeader({ handleRequestModal }) {
+export default function PageHeader() {
   const [activeItem, setActiveItem] = useState("Home");
 
   const { push } = useRouter();
@@ -16,10 +16,12 @@ export default function PageHeader({ handleRequestModal }) {
   };
   return (
     <nav className="mt-[20px] sm:w-full }mb-[30px] sm:px-[10px] md:px-[20px] items-center flex justify-between">
-      <img
-        src="/LandingPageImages/10k_Logo.svg"
-        className={`w-[132px] h-[46px] ${styles.logo} flex-shrink-0`}
-      />
+      <Link href="/">
+        <img
+          src="/LandingPageImages/10k_Logo.svg"
+          className={`w-[132px] h-[46px] ${styles.logo} flex-shrink-0`}
+        />
+      </Link>
       <section
         className={`flex ${styles.menuSection} justify-end sm:gap-x-[15px] md:gap-x-[36px] font-bold sm:text-[16px] items-center`}
       >
@@ -38,7 +40,6 @@ export default function PageHeader({ handleRequestModal }) {
           </p>
           <Link href="/#Course">
             <p
-              onClick={() => handleNavBarNavigation("Course")}
               className={`${
                 activeItem === "Course"
                   ? "text-[#FF8541]"
@@ -88,7 +89,7 @@ export default function PageHeader({ handleRequestModal }) {
             src="/LandingPageImages/menu-svgrepo-com.svg"
             className={`h-[30px] w-[30px] cursor-pointer`}
           />
-        )}
+        )}   
       </div>
     </nav>
   );
