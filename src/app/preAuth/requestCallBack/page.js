@@ -1,36 +1,16 @@
 "use client";
-import ThankYouModal from "components/Modals/ThankYouModal/ThankYouModal";
+import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
 import styles from "./RequestCallBack.module.css";
 import { useState } from "react";
 const RequestCallBack = () => {
   const [isTQModal, setTQmodal] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    mobile: null,
-    otp: null,
-    email: "",
-    whatsApp: false,
-  });
 
+  const handleConvertNum = (event) => {
+    const inputValue = event.target.value.replace(/\D/g, "");
+    event.target.value = inputValue;
+  };
   const handleThankYouModal = () => {
     setTQmodal(!isTQModal);
-  };
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    const sanitizedValue =
-      name === "mobile" || name === "otp"
-        ? value.replace(/\D/g, "")
-        : value;
-    const inputValue = type === "checkbox" ? checked : sanitizedValue;
-    setFormData({
-      ...formData,
-      [name]: inputValue,
-    });
-  };
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    handleThankYouModal();
-    console.log(formData)
   };
 
   return (
@@ -75,7 +55,6 @@ const RequestCallBack = () => {
           alt=""
         />
         <form
-          onSubmit={handleFormSubmit}
           className={`w-[454px] ${styles.content_section}  gap-[24px] flex flex-col rounded-[16px] h-[564px] bg-white px-[40px] py-[38px]`}
           action=""
         >
@@ -87,7 +66,7 @@ const RequestCallBack = () => {
           <div className="flex flex-col gap-[8px]">
             <label
               className="block text-[14px]  font-semibold  text-gray-900"
-              htmlFor="name"
+              htmlFor="Name"
             >
               Name
             </label>
@@ -96,18 +75,16 @@ const RequestCallBack = () => {
               <input
                 required
                 type="text"
-                id="name"
-                name="name"
-                value={formData.name}
+                id="Name"
+                name="Name"
                 className="focus:outline-none"
-                onChange={handleInputChange}
               />
             </div>
           </div>
           <div className="flex flex-col gap-[8px]">
             <label
               className="block text-[14px]  font-semibold  text-gray-900"
-              htmlFor="mobile"
+              htmlFor="Mobile Number"
             >
               Mobile Number
             </label>
@@ -119,13 +96,12 @@ const RequestCallBack = () => {
                 </span>
                 <input
                   required
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
+                  type="tele"
+                  id="Mobile Number"
+                  name="Mobile Number"
                   maxLength={10}
-                  value={formData["Mobile Number"]}
                   inputMode="numeric"
-                  onChange={handleInputChange}
+                  onChange={handleConvertNum}
                   className="focus:outline-none"
                 />
                 <button className="bg-[#FF8541] text-white tracking-[0.8px] py-1 px-2 font-semibold uppercase absolute right-[8px] text-[10px] rounded-[8px]">
@@ -137,7 +113,7 @@ const RequestCallBack = () => {
           <div className="flex flex-col gap-[8px]">
             <label
               className="block text-[14px] font-semibold  text-gray-900"
-              htmlFor="otp"
+              htmlFor="OTP"
             >
               OTP
             </label>
@@ -149,18 +125,17 @@ const RequestCallBack = () => {
                 maxLength="6"
                 inputMode="numeric"
                 pattern="\d*"
-                onChange={handleInputChange}
-                id="otp"
-                name="otp"
+                id="OTP"
+                name="OTP"
                 className="focus:outline-none"
-                value={formData.otp}
+                onChange={handleConvertNum}
               />
             </div>
           </div>
           <div className="flex flex-col gap-[8px]">
             <label
               className="block text-[14px] font-semibold  text-gray-900"
-              htmlFor="email"
+              htmlFor="Email ID"
             >
               Email ID
             </label>
@@ -169,11 +144,9 @@ const RequestCallBack = () => {
               <input
                 required
                 type="email"
-                id="email"
-                name="email"
-                onChange={handleInputChange}
+                id="Email ID"
+                name="Email ID"
                 className="focus:outline-none"
-                value={formData.email}
               />
             </div>
           </div>
@@ -182,16 +155,15 @@ const RequestCallBack = () => {
               <input
                 required
                 type="checkbox"
-                name="whatsApp"
-                id="whatsApp"
-                onChange={handleInputChange}
-                value={formData.whatsApp}
+                name="WhatsApp Notification Remainder"
+                id="WhatsApp Notification Remainder"
               />
-              <label htmlFor="whatsApp">
+              <label htmlFor="WhatsApp Notification Remainder">
                 I want to receive updates on WhatsApp
               </label>
             </div>
             <button
+              onClick={handleThankYouModal}
               type="submit"
               className="w-full p-[12px] font-[600] text-center bg-[#FF8541] text-white text-[16px] rounded-[8px]"
             >

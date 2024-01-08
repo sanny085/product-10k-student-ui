@@ -1,0 +1,106 @@
+.text_linear_gradient {
+  background: linear-gradient(270deg, #000 9.64%, #ff8541 99.8%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text_color_transition 2s linear infinite;
+}
+.quotecard_linear_gradient {
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    #f6f6f6 0%,
+    rgba(251, 251, 251, 0.63) 100%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(255, 133, 65, 0.2);
+  animation: quotecard_animation 10s ease 2s infinite;
+}
+.quotecard_card_parent::-webkit-scrollbar {
+  display: none;
+}
+.quotecard_card_parent {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.transition {
+  animation: snap 1s ease-in-out;
+}
+.imageTransition1 {
+  animation: topToBottomViceVersa 5s ease-in 0.5s infinite;
+}
+
+.imageTransition2 {
+  animation: opacity_animation 5s ease-in-out 1s infinite;
+}
+
+@keyframes snap {
+  0% {
+    transform: translate(20px, -20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity_animation {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text_color_transition {
+  to {
+    background: linear-gradient( #ff8541,  #ff8541 );
+    background-clip: text;
+    background-size:50% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes topToBottomViceVersa {
+  0%,
+  100% {
+    transform: translateY(0);
+    background: radial-gradient(circle at 50% 50%, #7241ff 0%, #ffffff00 50%);
+  }
+  30%,
+  80% {
+    transform: translateY(-20px);
+    background: radial-gradient(circle at 50% 50%, #ff8541 0%, #ffffff00 50%);
+  }
+  60% {
+    transform: translateY(20px);
+    background: radial-gradient(circle at 50% 50%, #7241ff 0%, #ffffff00 50%);
+  }
+}
+
+@keyframes quotecard_animation {
+  0% {
+    transform: translatex(-400px);
+  }
+  30% {
+    transform: translatex(-850px);
+  }
+  60% {
+    transform: translatex(-1250px);
+  }
+  100% {
+    transform: translatex(-1650px);
+  }
+}

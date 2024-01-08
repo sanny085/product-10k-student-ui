@@ -1,0 +1,122 @@
+.image_slide_parent {
+  overflow-x: hidden;
+  padding: 10px;
+}
+.image_slide_parent::-webkit-scrollbar {
+  display: none;
+}
+
+.image_slide {
+  animation: cycle 30s ease 0.5s infinite;
+  border-radius: 12px;
+  padding: 10px;
+}
+.image_slide2 {
+  animation: cycle2 30s ease 0.5s infinite;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+@keyframes cycle {
+  0% {
+    transform: translate(0px);
+  }
+  20% {
+    transform: translateX(calc(-900px + (100% - 960px) / 2));
+  }
+  40% {
+    transform: translate(0px);
+  }
+  60% {
+    transform: translateX(calc(-900px + (100% - 960px) / 2));
+  }
+  80% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translateX(calc(-900px + (100% - 960px) / 2));
+  }
+}
+@keyframes cycle2 {
+  0% {
+    transform: translateX(calc(-900px + (100% - 960px) / 2));
+  }
+  20% {
+    transform: translate(0px);
+  }
+  40% {
+    transform: translateX(calc(-900px + (100% - 960px) / 2));
+  }
+  60% {
+    transform: translate(0px);
+  }
+  80% {
+    transform: translateX(calc(-900px + (100% - 960px) / 2));
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .image_slide {
+    animation: cycle 30s ease 0.5s infinite;
+  }
+  .image_slide2 {
+    animation: cycle2 30s ease 0.5s infinite;
+  }
+  .image_slide,
+  .image_slide2 {
+    width: 90px;
+    height: 100%;
+    padding: 10px;
+  }
+  .image_slide_parent {
+    height: 100px;
+  }
+  @keyframes cycle {
+    0% {
+      transform: translate(0px);
+    }
+    20% {
+      transform: translateX(calc(-600px + (100% - 960px) / 2));
+    }
+    40% {
+      transform: translate(0px);
+    }
+    60% {
+      transform: translateX(calc(-600px + (100% - 960px) / 2));
+    }
+    80% {
+      transform: translate(0px);
+    }
+    100% {
+      transform: translateX(calc(-600px + (100% - 960px) / 2));
+    }
+  }
+  @keyframes cycle2 {
+    0% {
+      transform: translateX(calc(-600px + (100% - 960px) / 2));
+    }
+    20% {
+      transform: translate(0px);
+    }
+    40% {
+      transform: translateX(calc(-600px + (100% - 960px) / 2));
+    }
+    60% {
+      transform: translate(0px);
+    }
+    80% {
+      transform: translateX(calc(-600px + (100% - 960px) / 2));
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+}
+@media screen and (max-width: 535px) {
+  .heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
