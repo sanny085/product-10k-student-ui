@@ -1,5 +1,5 @@
 "use client";
-import ThankYouModal from "components/Modals/ThankYouModal/ThankYouModal";
+import ThankYouModal from "@/components/Modals/ThankYouModal/ThankYouModal";
 import styles from "./RequestCallBack.module.css";
 import { useState } from "react";
 const RequestCallBack = () => {
@@ -18,9 +18,7 @@ const RequestCallBack = () => {
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     const sanitizedValue =
-      name === "mobile" || name === "otp"
-        ? value.replace(/\D/g, "")
-        : value;
+      name === "mobile" || name === "otp" ? value.replace(/\D/g, "") : value;
     const inputValue = type === "checkbox" ? checked : sanitizedValue;
     setFormData({
       ...formData,
@@ -30,7 +28,7 @@ const RequestCallBack = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     handleThankYouModal();
-    console.log(formData)
+    // console.log(formData)
   };
 
   return (

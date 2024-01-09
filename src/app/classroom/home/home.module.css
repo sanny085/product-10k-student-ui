@@ -19,3 +19,11 @@
   height: 186px;
   background: url("/classroom_Images/Course image.png") no-repeat;
 }
+
+.student_table{
+  width: 710px;
+  height: 21.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  overflow-y: scroll ;
+}

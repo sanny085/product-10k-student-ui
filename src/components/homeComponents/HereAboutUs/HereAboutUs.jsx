@@ -1,4 +1,4 @@
-import ButtonComponent from "components/routeButton/button";
+import ButtonComponent from "@/components/routeButton/button";
 import Link from "next/link";
 export default function HereAboutUs() {
   return (

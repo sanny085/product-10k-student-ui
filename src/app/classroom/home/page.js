@@ -1,10 +1,11 @@
 "use client";
-import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
+import ClassroomNavBar from "@/components/classroomComponents/ClassroomNavBar";
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import styles from "./home.module.css";
-import { CodeBlockIcon } from "@/shared/svgIcons/classroom";
-import { NextUIProvider } from "@nextui-org/react";
+import { CodeBlockIcon, SearchIcon } from "@/shared/svgIcons/classroom";
+import LeaderBoard from "@/components/classroomComponents/leaderBoard/LeaderBoard";
+import StudentProgressCard from "@/components/classroomComponents/StudentProgressCard";
 
 export default function ClassroomHome() {
   const ContinueCard = () => {
@@ -60,20 +61,23 @@ export default function ClassroomHome() {
     );
   };
   return (
-    <NextUIProvider>
-      <main className="bg-[#DDF5FF] w-full min-h-[100vh] flex">
-        <div className="mt-[40px] pl-[50px] ml-[220px] flex w-full flex-col gap-[40px]">
-          <ClassroomNavBar />
-          <p className="font-bold text-[24px] text-center">
-            Home page is under development
-          </p>
-          <div className="flex gap-[30px]">
-            <ContinueCard />
-            <AssignmentCard />
-            <VisulaizationCard />
+    <main className="bg-[#DDF5FF] w-full min-h-[100vh] flex">
+      <div className="mt-[40px] pl-[50px] ml-[220px] flex w-full flex-col gap-[40px]">
+        <ClassroomNavBar />
+        <div className="flex mt-[70px] gap-[30px]">
+          <ContinueCard />
+          <AssignmentCard />
+          <VisulaizationCard />
+        </div>
+        <div className="flex gap-[40px]">
+          <div className="rounded-[16px] gap-[20px] w-[710px]">
+            <LeaderBoard />
+          </div>
+          <div>
+            <StudentProgressCard />
           </div>
         </div>
-      </main>
-    </NextUIProvider>
+      </div>
+    </main>
   );
 }

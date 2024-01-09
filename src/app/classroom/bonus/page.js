@@ -1,5 +1,5 @@
-import ClassroomNavBar from "components/classroomComponents/ClassroomNavBar";
-import SessionCard from "components/classroomComponents/SessionCard";
+import ClassroomNavBar from "@/components/classroomComponents/ClassroomNavBar";
+import SessionCard from "@/components/classroomComponents/SessionCard";
 
 export default function ClassroomBonus() {
   return (
